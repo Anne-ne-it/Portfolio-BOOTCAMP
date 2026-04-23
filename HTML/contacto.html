@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dclogxnep/image/upload/v1774110793/PORTADA_portfolio_gmoob7.png">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Contacto</title>
+  </head>
+
+
+  <body class="contacto">
+    <header id="menuNavegacion"></header>
+
+  <main class="contenedor-formilario">
+    <section class="formulario-contacto">
+      <h1>Contacto</h1>
+      <p class="intro-contacto">¿Tienes alguna pregunta o propuesta? Rellena el formulario y me pondré en contacto contigo lo antes posible.</p>
+      
+      <div class="container-datos">
+        <form class="grupo-persona" method="POST">
+          <div class="grupo-datos">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="grupo-datos">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required> 
+          </div>
+          <div class="grupo-edad">
+            <label class="form-label" for="fechaedad">Fecha de nacimiento</label>
+            <input class="form-input" type="date" id="fechaedad" name="fechaedad" />
+          </div>
+          <div class="grupo-email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="contacto@email.com" required>
+          </div>
+          <div class="grupo-asunto">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+          </div>
+          <div class="grupo-mensaje">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+    
+          <button type="submit" class="boton-submit">Enviar mensaje</button>
+          <button type="reset" class="boton-reset">Borrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+    <footer class="pie-de-pagina" id="pie-de-pagina"></footer>
+    <script type="module" src="./javascript/main.js"></script>
+  </body>
+</html>
