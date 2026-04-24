@@ -1,14 +1,20 @@
 //MENU NAVEGACION
 export const menuNavegacion = () => {
+    // Detectamos si estamos en la raíz o dentro de la carpeta HTML
+    // Esto evita que las rutas se rompan al navegar
+    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+    const pathPrefix = isRoot ? './HTML/' : './';
+    const indexPrefix = isRoot ? './' : '../';
+
     return `
     <nav class="menuNavegacion">
-        <a href="./index.html" class="logo"><strong>AA</strong></a>
+        <a href="${indexPrefix}index.html" class="logo"><strong>AA</strong></a>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="./HTML/cheatsheets.html">Cheatsheets</a></li>
-            <li><a href="./HTML/habilidades.html">Skills</a></li>
-            <li><a href="./HTML/recursos.html">Recursos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="${pathPrefix}about.html">About</a></li>
+            <li><a href="${indexPrefix}index.html#skills">Skills</a></li>
+            <li><a href="${pathPrefix}cheatsheets.html">Cheatsheets</a></li>
+            <li><a href="${pathPrefix}recursos.html">Recursos</a></li>
+            <li><a href="${pathPrefix}contacto.html">Contacto</a></li>
           </ul>
 
         <button class="hamburguesa" id="hamburguesa" aria-label="hamburguesa">
@@ -21,7 +27,7 @@ export const menuNavegacion = () => {
         <span id="theme-icon">🌙</span>
         </button>
     </nav>`;
-};
+}
     
 //FOOTER
 export const footer = () => {
