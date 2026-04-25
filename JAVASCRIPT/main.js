@@ -60,3 +60,12 @@ import { initTheme } from "./utils.js";
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
 });
+
+
+//CHEATSHEETS
+import { cheatsheets } from "./data.js";
+import { renderCheatsheets } from "./utils.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderCheatsheets(cheatsheets);
+});

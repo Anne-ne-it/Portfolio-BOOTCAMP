@@ -73,12 +73,6 @@ h1, h2, h3, h4, span {
   border: 1px solid var(--color-border); /*color del borde de las tarjetas*/
 }
 
-/*imagenes de las tarjetas en blanco*/
-.dark-mode .skill-card .skill-icon {
-    filter: brightness(0) invert(1); /* Convierte la imagen a blanco para que se vea en modo oscuro */
-    transition: filter 0.3s ease; /* Para suavizar el cambio de color */
-}
-
 /* Botón del tema oscuro*/
 .theme-btn {
   padding: var(--space-sm); /*espacio entre el texto y los bordes del botón*/
@@ -254,19 +248,17 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 .pie-de-pagina a, .dark-mode .pie-de-pagina a {
   display: inline-block;  /*Colocar elementos uno al lado del otro, con control de tamaño */
   text-decoration: none; /*para quitar subrayads o decoración ya establecida*/
-  color: var(--color-accent-blue); /*color del texto*/
-  font-size: 14px; /*tamaño del texo*/
+  font-weight: var(--font-weight-bold); /*peso de la fuente*/
+  color: white; /*color del texto*/
+  font-size: 16px; /*tamaño del texo*/
   padding: 8px 18px; /*margenes*/
-  border: 1px solid var(--color-accent-blue); /* Un pequeño recuadro para el logo */
   border-radius: 7px; /*borde del cuadro*/
   background-color: transparent; /*fondo de color transparente*/
-  transition: all var(--transition-normal);  /* Velocidad para la animación */
+  transition: color  var(--transition-normal);  /* Velocidad para la animación */
 }
 
 .pie-de-pagina a:hover, .dark-mode .pie-de-pagina a:hover {
-  color: var(--color-bg-main); /*color del texto*/
-  transform: translateY(-4px); /*para que suba*/
-  background-color: var(--color-accent-blue); /*Cambia el color de fonde del boton a gris claro*/
+  color: var(--color-accent-blue); /*color del texto*/
 }
 
 .pie-de-pagina p, .dark-mode .pie-de-pagina p {
@@ -387,41 +379,49 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
   margin: 0; /*distancia con el margen*/
 }
 
-#skills-container, #proyectos-container, #cheatsheets-container {
+#skills-container {
   display: flex; /*pone los elementos uno junto al otro*/
   flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  justify-content: space-between; /*espacio entre los objetos*/
-  align-items: center; /*alinea los objetos verticalmente*/
   gap: var(--space-md); /*espacio entre los objetos*/
   padding: var(--space-lg) 0; /*espacio con la parte de arriba y abajo*/
 }
 
 .skill-card {
+  flex: 1 1 calc(25% - var(--space-md)); /*para que cada tarjeta ocupe el 25% del contenedor menos el espacio entre tarjetas*/
+  min-width: 220px; /*ancho mínimo para que las tarjetas no se vuelvan demasiado pequeñas en pantallas pequeñas*/
   background: var(--color-bg-main); /*color de fondo de la tarjeta*/
   border-radius: var(--radius-md); /*redondeo de las esquinas de la tarjeta*/
   padding: var(--space-md); /*espacio entre el contenido y los bordes de la tarjeta*/
-  width: 300px; /*ancho fijo para mantener la consistencia*/
-  height: 350px; /*alto fijo para mantener la consistencia*/
   box-shadow: var(--shadow-soft); /*sombra de la tarjeta para darle profundidad*/
 }
 
 .skill-icon {
-  width: 50px; /*tamaño del icono de la tarjeta*/
+  width: 60px; /*tamaño del icono de la tarjeta*/
+  height: 60px; /*tamaño del icono de la tarjeta*/
   margin-bottom: var(--space-md);/*espacio entre el icono y el título*/
 }
 
 .skill-card h4 {
+  color: var(--color-text-primary); /*color del título de la tarjeta*/
   font-size: 20px; /*tamaño del título de la tarjeta*/
   font-weight: var(--font-weight-bold); /*grosor del título de la tarjeta*/
-  margin: 0;/*espacio entre el título y el nivel de habilidad*/
+  margin: var(--space-xs);/*espacio entre el título y el nivel de habilidad*/
 }
 
-.skill-level {
-  color: #3498db; /*color del nivel de habilidad*/
-  font-weight: var(--font-weight-bold);/*para resaltar el nivel de habilidad*/
+.skill-nivel {
+  color: var(--color-accent-blue); /*color del nivel de habilidad*/
+  font-weight: var(--font-weight-medium);/*para resaltar el nivel de habilidad*/
   font-size: 16px; /*tamaño del nivel de habilidad*/
-  display: block; /*para que ocupe toda la línea y se separe del título*/
-  margin-bottom: var(--space-md);/*espacio entre el nivel de habilidad y las etiquetas de habilidades*/
+  margin-bottom: var(--space-xs);/*espacio entre el nivel de habilidad y las etiquetas de habilidades*/
+  text-transform: uppercase; /*para que el nivel de habilidad esté en mayúsculas*/
+  letter-spacing: 1px; /*espacio entre letras para mejorar la legibilidad del nivel de habilidad*/
+}
+
+.skill-descripcion {
+  font-size: 14px; /*tamaño de la descripción de la tarjeta*/
+  color: var(--color-text-secondary); /*color de la descripción de la tarjeta*/
+  line-height: 1.5; /*espacio entre líneas para mejorar la legibilidad de la descripción de la tarjeta*/
+  margin-bottom: var(--space-sm); /*espacio entre la descripción de la tarjeta y el nivel de habilidad*/
 }
 
 .skill-tags {
@@ -763,6 +763,71 @@ textarea {
 }
 
 
+/*SECCIÓN DE TARJETAS CHEATSHEETS*/
+.cheatsheets-intro {
+  font-size: 18px; /*tamaño*/
+  color: var(--color-text-secondary); /*color*/
+  margin-top: var(--space-sm); /*espacio con la parte de arriba*/
+  line-height: 1.6; /*espacio entre lineas*/
+}
+
+#cheatsheets-container {
+  display: flex; /*pone los elementos uno junto al otro*/
+  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
+  gap: var(--space-md); /*espacio entre los objetos*/
+  align-items: start; /*alinea los objetos verticalmente al inicio*/
+  margin-top: var(--space-md); /*espacio con la parte de arriba*/
+}
+
+.cheatsheets-card {
+  flex: 1 1 calc(25% - var(--space-md)); /*para que cada tarjeta ocupe un cuarto del espacio disponible, restando el gap entre ellas*/
+  background-color: var(--color-bg-main); /*color de fondo de la tarjeta*/
+  border-radius: var(--radius-md); /*redondeo de las esquinas de la tarjeta*/
+  padding: var(--space-md); /*espacio entre el contenido y los bordes de la tarjeta*/
+  box-shadow: var(--shadow-soft); /*sombra de la tarjeta para darle profundidad*/
+  display: flex; /*pone los elementos uno junto al otro*/
+  flex-direction: column; /*pone un elemento sobre otro*/
+  align-items: center; /*alinea los elementos en el centro*/
+  text-align: center; /*alinea el texto al centro*/
+  text-decoration: none; /*para quitar subrayados o decoración ya establecida*/
+  color: var(--color-text-primary); /*color del texto*/
+  transition: all var(--transition-normal); /*tiempo del efecto*/
+  margin-top: var(--space-md); /*espacio con la parte de arriba*/
+}
+
+.cheatsheets-card:hover {
+  transform: translateY(-4px); /*para que suba*/
+  box-shadow: var(--shadow-soft); /*sombra de la tarjeta para darle profundidad*/
+}
+
+.cheatsheets-icon-wrapper {
+  width: 60px; /*tamaño del contenedor del icono*/
+  height: 60px; /*tamaño del contenedor del icono*/
+  display: flex; /*pone los elementos uno junto al otro*/
+  align-items: center; /*alinea los elementos verticalmente en el centro*/
+  justify-content: center; /*alinea los elementos horizontalmente en el centro*/
+  margin-bottom: var(--space-md); /*espacio entre el contenedor del icono y el título de la tarjeta*/
+}
+
+.cheatsheets-card .cheatsheets-icon {
+  width: 100%; /*hace que el icono ocupe todo el espacio del contenedor*/
+  height: 100%; /*hace que el icono ocupe todo el espacio del contenedor*/
+  object-fit: contain; /*para que el icono se ajuste al contenedor sin deformarse*/
+}
+
+.cheatsheets-card h4 {
+  font-size: 18px; /*tamaño del título de la tarjeta*/
+  font-weight: var(--font-weight-bold); /*grosor del título de la tarjeta*/
+  color: var(--color-text-primary); /*color del título de la tarjeta*/
+  margin-bottom: var(--space-xs); /*margen entre el título de la tarjeta y la descripción*/
+}
+
+.cheatsheets-card p {
+  font-size: 14px; /*tamaño de la descripción de la tarjeta*/
+  color: var(--color-text-secondary); /*color de la descripción de la tarjeta*/
+}
+
+
 
 
 
@@ -881,16 +946,14 @@ textarea {
     flex: 1 1 100%; /* Las cajas de valores ahora ocupan todo el ancho en móvil */
   }
 
-  /*TARJETAS (SKILLS / PROYECTOS) */
-  #skills-container, #proyectos-container {
+  /*TARJETAS (SKILLS / PROYECTOS / CHEATSHEETS) */
+  #skills-container, #proyectos-container, #cheatsheets-container {
     justify-content: center; /*centra las tarjetas horizontalmente en móviles*/
   }
 
-  .skill-card {
+  .skill-card, .cheatsheets-card {
     width: 100%; /*hace que las tarjetas ocupen todo el ancho disponible en móviles*/
-    max-width: 320px; /*limita el ancho máximo para que no se vea demasiado grande en pantallas pequeñas*/
     height: auto; /* Permite que el texto respire */
-    min-height: 320px; /* Mantiene una altura mínima para que las tarjetas no se vean demasiado pequeñas */
   }
 
   /*FORMULARIO DE CONTACTO */

@@ -35,10 +35,26 @@ export const renderSkills = (datos) => {
           <img src="${skill.icon}" alt="${skill.titulo}" class="skill-icon">
           <h4>${skill.titulo}</h4>
           <span class="skill-nivel">${skill.nivel}</span>
-          <p>${skill.descripcion}</p>
+          <p class="skill-descripcion">${skill.descripcion}</p>
           <div class="skill-tags">
             ${skill.tags.map(tag => `<span class="tags">${tag}</span>`).join('')}
            </div>
         </div>
     `).join('');
 };
+
+
+
+//TARJETAS SECCION CHEATSHEETS
+export const renderCheatsheets = (datos) => {
+    const cheatsheetsContainer = document.getElementById("cheatsheets-container");
+    cheatsheetsContainer.innerHTML = datos.map(sheet => `
+      <a href="${sheet.link}" class="cheatsheets-card">
+        <div class="cheatsheets-icon-wrapper">
+          <img src="${sheet.icon}" alt="${sheet.titulo}" class="cheatsheets-icon">
+        </div>
+        <h4>${sheet.titulo}</h4>
+        <p>${sheet.descripcion}</p>
+      </a>
+    `).join('');
+}
