@@ -27,6 +27,234 @@
             <a href="#A11y">A11y</a>
         </nav>
 
+        <main>
+            <section class="cheatsheet-hero" id="cheatsheetHero">
+                <span class="cheatsheets-badge">Cheat Sheets</span>
+                    <h1>HTML</h1>
+                    <p> Guía rápida para el lenguaje de marcado HTML: estructura, meta, texto, enlaces, listas, multimedia, tablas, formularios, semántica y atributos</p>
+            </section>
+
+            <section  class="cheatsheets-contenido" id="cheatsheetContenido">
+                <article class="cheatsheets-carta" id="estructura">
+                    <h2>Estructura básica</h2>
+                    <p class="cheatsheets-mini">La estructura básica de un documento HTML se compone de las siguientes partes:</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;!-- Ejemplo: estructura mínima --&gt;
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            &lt;title&gt;Título&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;main&gt;Contenido&lt;/main&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cheatsheets-notas">
+                        <ul class="cheatsheets-list">
+                            <li><strong>DOCTYPE</strong> primero.</li>
+                            <li><strong>meta charset</strong> lo más arriba posible.</li>
+                            <li><strong>meta viewport</strong> para responsive design.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="meta">
+                    <h2>Metaetiquetas</h2>
+                    <p class="cheatsheets-mini"> Básicos + SEO + redes sociales.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;meta name="description" content="Descripción clara"&gt;
+                        &lt;meta name="robots" content="index, follow"&gt;
+                        &lt;link rel="canonical" href="https://ejemplo.com/pagina"&gt;
+                        &lt;meta property="og:title" content="Título"&gt;
+                        &lt;meta property="og:description" content="Descripción"&gt;
+                        &lt;meta property="og:image" content="https://ejemplo.com/img.jpg"&gt;
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="texto">
+                    <h2>Encabezados y texto</h2>
+                    <p class="cheatsheets-mini">Etiquetas para formatear texto.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;h1&gt;Título principal&lt;/h1&gt;
+                        &lt;h2&gt;Subtítulo&lt;/h2&gt;
+                        &lt;h3&gt;Subsubtítulo&lt;/h3&gt;
+                        &lt;h4&gt;Encabezado 4&lt;/h4&gt;
+                        &lt;h5&gt;Encabezado 5&lt;/h5&gt;
+                        &lt;h6&gt;Encabezado 6&lt;/h6&gt;
+                        &lt;p&gt;Párrafo de texto.&lt;/p&gt;
+                        &lt;strong&gt;Texto importante&lt;/strong&gt;
+                        &lt;em&gt;Texto enfatizado&lt;/em&gt;
+                        &lt;mark&gt;Highlight&lt;/mark&gt;
+                        &lt;br&gt; &lt;!-- Salto de línea --&gt;
+                        &lt;hr&gt; &lt;!-- Línea horizontal --&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cheatsheets-notas">
+                        <ul class="cheatsheets-list">
+                            <li> Usa &lt;h1&gt; una vez por página y respeta la jerarquía.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="enlaces">
+                    <h2>Enlaces y navegación</h2>
+                    <p class="cheatsheets-mini">Cómo crear enlaces y enlaces accesibles.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;a href="https://ejemplo.com"&gt;Externo&lt;/a&gt;
+                        &lt;a href="/ruta"&gt;Interno&lt;/a&gt;
+                        &lt;a href="#seccion"&gt;Ancla&lt;/a&gt;
+                        &lt;a href="https://ejemplo.com" target="_blank" rel="noopener noreferrer"&gt;
+                        Nueva pestaña (seguro)
+                        &lt;/a&gt;
+                        &lt;nav aria-label="Principal"&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/nav&gt;
+                        </code></pre>
+                    </div>
+                    </article>
+
+                <article class="cheatsheets-carta" id="listas">
+                    <h2>Listas</h2>
+                    <p class="cheatsheets-mini">Listas ordenadas, desordenadas y de definición.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;ul&gt;
+                        &lt;li&gt;Elemento 1&lt;/li&gt;
+                        &lt;li&gt;Elemento 2&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;ol&gt;
+                        &lt;li&gt;Primer elemento&lt;/li&gt;
+                        &lt;li&gt;Segundo elemento&lt;/li&gt;
+                        &lt;/ol&gt;
+                        &lt;dl&gt;
+                        &lt;dt&gt;Término 1&lt;/dt&gt;
+                        &lt;dd&gt;Definición 1&lt;/dd&gt;
+                        &lt;/dl&gt;
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="multimedia">
+                    <h2>Multimedia</h2>
+                    <p class="cheatsheets-mini">Cómo insertar imágenes, audio y video.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;img src="imagen.jpg" alt="Descripción"&gt;
+                        &lt;audio controls&gt;
+                        &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+                        &lt;/audio&gt;
+                        &lt;video controls width="600"&gt;
+                        &lt;source src="video.mp4" type="video/mp4"&gt;
+                        &lt;/video&gt;
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="formularios">
+                    <h2>Formularios</h2>
+                    <p class="cheatsheets-mini">Elementos básicos para crear formularios.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;form action="/submit" method="post"&gt;
+                        &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                        &lt;input type="text" id="nombre" name="nombre"&gt;
+                        &lt;label for="email"&gt;Email:&lt;/label&gt;
+                        &lt;input type="email" id="email" name="email"&gt;
+                        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                        &lt;/form&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cheatsheets-notas">
+                        <ul class="cheatsheets-list">
+                            <li>Siempre <strong>label + for</strong> conectado a un <strong>id</strong>.</li>
+                            <li>Usa <strong>required</strong>, <strong>minlength</strong>, <strong>pattern</strong> cuando aplique.</li>
+                        </ul>  
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="semantica">
+                    <h2>Etiquetas semánticas</h2>
+                    <p class="cheatsheets-mini">Elementos para estructurar el contenido de forma semántica.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;header&gt;Encabezado&lt;/header&gt;
+                        &lt;nav&gt;Navegación&lt;/nav&gt;
+                        &lt;main&gt;Contenido principal&lt;/main&gt;
+                        &lt;section&gt;Sección&lt;/section&gt;
+                        &lt;article&gt;Artículo&lt;/article&gt;
+                        &lt;aside&gt;Contenido relacionado&lt;/aside&gt;
+                        &lt;footer&gt;Pie de página&lt;/footer&gt;
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="atributos">
+                    <h2>Atributos comunes</h2>
+                    <p class="cheatsheets-mini">Atributos globales y específicos de elementos.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;!-- Atributos globales --&gt;
+                        &lt;div id="miDiv" class="clase1 clase2" data-info="valor"&gt;Contenido&lt;/div&gt;
+                        &lt;!-- Atributos específicos --&gt;
+                        &lt;input type="text" placeholder="Escribe aquí"&gt;
+                        &lt;a href="https://ejemplo.com" target="_blank"&gt;Enlace&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="A11y">
+                    <h2>Accesibilidad (A11y)</h2>
+                    <p class="cheatsheets-mini">Buenas prácticas para mejorar la accesibilidad de tu sitio web.</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        &lt;!-- Uso de ARIA --&gt;
+                        &lt;nav aria-label="Principal"&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/nav&gt;
+
+                        &lt;!-- Etiquetas semánticas --&gt;
+                        &lt;header&gt;Encabezado&lt;/header&gt;
+                        &lt;main&gt;Contenido principal&lt;/main&gt;
+                        &lt;footer&gt;Pie de página&lt;/footer&gt;
+
+                        &lt;!-- Texto alternativo --&gt;
+                        &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+
+                        &lt;!-- Formularios accesibles --&gt;
+                        &lt;label for="email"&gt;Email:&lt;/label&gt;
+                        &lt;input type="email" id="email" name="email"&gt;
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="buenaspracticas">
+                    <h2>Mejores prácticas</h2>
+                    <ul class="cheatsheets-list">
+                        <li>HTML válido, indentación consistente.</li>
+                        <li>Imágenes con <strong>alt</strong> descriptivo (o vacío si decorativa).</li>
+                        <li>Links externos con <strong>rel="noopener noreferrer"</strong>.</li>
+                        <li>Performance: <strong>loading="lazy"</strong> en imágenes no críticas.</li>
+                        <li>Testing: Validator, Lighthouse, WAVE / axe.</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
         <footer class="pie-de-pagina" id="pie-de-pagina"></footer>
         <script type="module" src="../javascript/main.js"></script>
 

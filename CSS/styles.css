@@ -827,7 +827,39 @@ textarea {
   color: var(--color-text-secondary); /*color de la descripción de la tarjeta*/
 }
 
+.cheatsheets-nav {
+  position: sticky; /*para que el menú se quede fijo en la parte superior al hacer scroll*/
+  top: 66px; /*para que el menú no se superponga con el header al hacer scroll*/
+  max-width: 1000px;/* No crecerá más de 1000px en pantallas grandes */
+  background-color: var(--color-bg-main); /*color de fondo del menú*/
+  display: flex; /*pone los elementos uno junto al otro*/
+  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
+  justify-content: center; /*alinea los elementos horizontalmente en el centro*/
+  align-items: center; /*alinea los elementos verticalmente en el centro*/
+  gap: var(--space-md); /*espacio entre los elementos del menú*/
+  padding: var(--space-sm) var(--space-md); /*espacio con la parte de arriba y abajo del menú*/
+  z-index: 100; /*para que el menú se superponga a otros elementos al hacer scroll*/
+  border-radius: 0 0 var(--radius-md) var(--radius-md); /*redondear las esquinas del menú 0 para las de arriba, var(--radius-md) para las de abajo */
+  border-bottom: 2px solid var(--color-bg-soft); /*línea inferior para separar el menú del contenido al hacer scroll*/
+  box-shadow: var(--shadow-soft); /*sombra para darle profundidad al menú al hacer scroll*/
+  margin-left: auto !important; /*para que el menú se alinee a la derecha en pantallas grandes, con !important para asegurar que se aplique esta regla incluso si hay otras reglas que intentan alinear el menú de otra manera*/
+  margin-right: auto !important; /*para que el menú se alinee a la derecha en pantallas grandes, con !important para asegurar que se aplique esta regla incluso si hay otras reglas que intentan alinear el menú de otra manera*/
+}
 
+.cheatsheets-nav a {
+  color: var(--color-text-primary); /*color del texto del menú*/
+  font-size: 14px; /*tamaño del texto del menú*/
+  text-decoration: none; /*para quitar subrayados o decoración ya establecida*/
+  padding: var(--space-sm) var(--space-md); /*espacio con la parte de arriba y abajo, y con los lados del menú*/
+  border-radius: var(--radius-sm); /*redondear las esquinas del menú*/
+  position: relative; /* Esto es el "ancla" para la línea */
+  display: inline-block; /* Asegura que el padding y la posición funcionen bien */
+  transition: all var(--transition-normal); /*tiempo del efecto*/
+}
+
+.cheatsheets-nav a:hover {
+  color: var(--color-accent-yellow);
+}
 
 
 

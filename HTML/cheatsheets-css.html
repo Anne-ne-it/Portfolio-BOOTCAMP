@@ -15,20 +15,292 @@
         <header id="menuNavegacion"></header>
 
         <nav class="cheatsheets-nav" id="cheatsheetsNav">
-            <a href="#estructura">Estructura</a>
-            <a href="#meta">Meta</a>
+            <a href="#selectores">Selectores</a>
             <a href="#texto">Texto</a>
-            <a href="#enlaces">Enlaces</a>
-            <a href="#listas">Listas</a>
-            <a href="#multimedia">Multimedia</a>
-            <a href="#formularios">Formularios</a>
-            <a href="#semantica">Semántica</a>
-            <a href="#atributos">Atributos</a>
-            <a href="#A11y">A11y</a>
+            <a href="#colores">Colores</a>
+            <a href="#box-model">Box Model</a>
+            <a href="#display">Display / Position</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#transiciones">Transiciones</a>
+            <a href="#animaciones">Animaciones</a>
+            <a href="#media">Media Queries</a>
         </nav>
 
+        <main>
+            <section class="cheatsheet-hero" id="cheatsheetHero">
+                <span class="cheatsheets-badge">Cheat Sheets</span>
+                    <h1>CSS</h1>
+                    <p> Guía rápida para el lenguaje de estilo CSS: selectores, texto, colores, box model, display y position, flexbox, transiciones, animaciones y media queries</p>
+            </section>
+
+            <section  class="cheatsheets-contenido" id="cheatsheetContenido">
+                <article class="cheatsheets-carta" id="selectores">
+                    <h2>Selectores</h2>
+                    <p class="cheatsheets-mini">Base + atributo + combinadores + pseudo-clases + pseudo-elementos</p>
+                    <div class="cheatsheets-code">
+                        <pre><code>/* Básicos */
+                        * { box-sizing: border-box; }
+                        h1 { font-size: 2rem; }
+                        .destacado { font-weight: 700; }
+                        #encabezado { text-align: center; }
+
+                        /* Atributo */
+                        input[type="text"] { border: 1px solid #ccc; }
+                        a[href*="github"] { color: #333; }
+                        img[src^="https"] { border: 2px solid green; }
+                        a[href$=".pdf"] { color: red; }
+
+                        /* Combinadores */
+                        article p { line-height: 1.6; }   /* descendiente */
+                        nav > ul { list-style: none; }    /* hijo directo */
+                        h2 + p { margin-top: 0; }         /* adyacente */
+                        h2 ~ p { color: #666; }           /* hermanos */
+
+                        /* Pseudo-clases */
+                        a:hover { text-decoration: underline; }
+                        input:focus { outline: 2px solid #8fd1fc; }
+
+                        /* Estructurales */
+                        li:first-child { font-weight: 700; }
+                        tr:nth-child(even) { background: #f9fafb; }
+
+                        /* Pseudo-elementos */
+                        p::first-line { font-weight: 700; }
+                        ::selection { background: #ffda73; color: #282828; }
+                        </code></pre>
+                    </div>
+                    <div class="cheatsheets-notas">
+                        <ul class="cheatsheets-list">
+                            <li>Regla práctica: clase para estilos, id para JS/anclas.</li>
+                            <li>Prioriza selectores simples (mejor mantenibilidad).</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="texto">
+                    <h2>Propiedades de texto</h2>
+                    <p class="cheatsheets-mini">Fuente + formato + truncado + responsive.</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        /* Fuente */
+                        body { font-family: 'Arial', sans-serif; }
+                        h1 { font-size: 2rem; }
+                        .subtitulo { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+                        /* Formato */
+                        p { line-height: 1.6; }
+                        .resaltado { color: #e63946; }
+                        .cursiva { font-style: italic; }
+
+                        /* Truncado */
+                        .truncado {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 200px;
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="colores">
+                    <h2>Colores</h2>
+                    <p class="cheatsheets-mini">Formatos + background + gradientes + variables CSS.</p>                   </p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        /* Formatos */
+                        .color { color: #785082; }
+                        .fondo { background: rgb(240, 180, 0); }
+                        .sombra { box-shadow: 0 8px 18px rgba(0,0,0,.12); }
+
+                        /* Fondo con imagen */
+                        .hero {
+                        background-image: url("img.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        }
+
+                        /* Gradiente */
+                        .banner {
+                        background: linear-gradient(135deg, #785082, #6990aa);
+                        }
+
+                        /* Variables (ya las tienes en :root) */
+                        .btn {
+                        color: var(--white);
+                        background: var(--secondary);
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="box-model">
+                    <h2>Box Model</h2>
+                    <p class="cheatsheets-mini">Width/height + padding + border + margin + box-sizing.</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        .card {
+                        width: min(520px, 100%);
+                        padding: 20px;
+                        margin: 20px auto;
+
+                        border: 1px solid var(--light);
+                        border-radius: 10px;
+
+                        box-shadow: 0 10px 24px rgba(0,0,0,.08);
+                        overflow: hidden;
+                        }
+
+                        /* outline (no ocupa espacio) */
+                        .input:focus {
+                        outline: 2px solid var(--accent);
+                        outline-offset: 2px;
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="display">
+                    <h2>Display / Position</h2>
+                    <p class="cheatsheets-mini">Valores + posicionamiento + flexbox + grid.</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        /* Valores comunes */
+                        .block { display: block; }
+                        .inline { display: inline; }
+                        .inline-block { display: inline-block; }
+                        .none { display: none; }
+
+                        /* Posicionamiento */
+                        .relative { position: relative; }
+                        .absolute { position: absolute; }
+                        .fixed { position: fixed; }
+
+                        /* Flexbox */
+                        .flex {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        }
+
+                        /* Grid */
+                        .grid {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-gap: 20px;
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="flexbox">
+                    <h2>Flexbox</h2>
+                    <p class="cheatsheets-mini">Contenedor flexible para layouts 1D.</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        .row {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 16px;
+                        }
+
+                        .wrap {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 16px;
+                        }
+
+                        .item {
+                        flex: 1 1 240px; /* grow shrink basis */
+                        }
+
+                        .push-right {
+                        margin-left: auto; /* empuja a la derecha */
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="transiciones">
+                    <h2>Transiciones</h2>
+                    <p class="cheatsheets-mini"> Animar cambios sin JS (hover, focus, etc.).</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        .btn {
+                        transition: background 0.3s ease, color 0.3s ease;
+                        }
+
+                        .btn:hover {
+                        background: var(--accent);
+                        color: var(--white);
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="animaciones">
+                    <h2>Animaciones</h2>
+                    <p class="cheatsheets-mini">Animar con keyframes para efectos más complejos (duración, delay, fill-mode).</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        @keyframes fadeUp {
+                        from { opacity: 0; transform: translateY(10px); }
+                        to   { opacity: 1; transform: translateY(0); }
+                        }
+
+                        .aparece {
+                        animation: fadeUp .35s ease-out both;
+                        }
+
+                        /* Accesibilidad */
+                        @media (prefers-reduced-motion: reduce) {
+                        * { animation: none !important; transition: none !important; }
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+
+                <article class="cheatsheets-carta" id="media">
+                    <h2>Media Queries</h2>
+                    <p class="cheatsheets-mini">Diseño responsive con breakpoints para adaptar el layout a diferentes tamaños de pantalla.</p>
+
+                    <div class="cheatsheets-code">
+                        <pre><code>
+                        /* Mobile first: estilos base para móvil, luego media queries para desktop */
+                        .container {
+                        display: block;
+                        }
+
+                        /* Tablet */
+                        @media (min-width: 768px) {
+                        .container { padding: 24px; }
+                        }
+
+                        /* Desktop */
+                        @media (min-width: 1024px) {
+                        .container { padding: 32px; }
+                        }
+
+                        /* Dark scheme (si quieres complementarlo a tu .dark) */
+                        @media (prefers-color-scheme: dark) {
+                        :root { color-scheme: dark; }
+                        }
+                        </code></pre>
+                    </div>
+                </article>
+        </main>
+        
         <footer class="pie-de-pagina" id="pie-de-pagina"></footer>
         <script type="module" src="../javascript/main.js"></script>
 
     </body>
-</html>
+</html>   
