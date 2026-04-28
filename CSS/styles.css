@@ -1,865 +1,924 @@
-/* Importa la fuente "Roboto" desde Google Fonts con distintos grosores (300–900) */
+/*IMPORTA LA FUENTE "Roboto" DESDE GOOGLE FONTS CON DISTINTOS GROSORES (300–900)*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-/* :root define variables globales accesibles en todo el documento */
+/*:root DEFINE VARIABLES GLOBALES ACCESIBLES EN TODO EL DOCUMENTO*/
 :root {
 
   /*COLORES BASE*/
-  --color-text-primary: #000000; /* Color principal para textos (títulos, contenido importante) */
-  --color-text-secondary: #4a4a4a; /* Color para textos secundarios o menos destacados */
-  --color-text-muted: #9b9b9b; /* Color para textos suaves (placeholders, ayudas, estados desactivados) */
-  --color-bg-main: #f9f9f9; /* Color de fondo principal de la página */
-  --color-bg-soft: #e0e0e0; /* Fondo alternativo para secciones o tarjetas */
-  --color-accent-yellow: #ffce1b; /* Color llamativo (botones, highlights) */
-  --color-accent-blue: #25c1dd; /* Color llamativo dos (links, hover, elementos interactivos) */
-  --color-border: #cfe7f2; /* Color de bordes (inputs, cards, separadores) */
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12); /* Sombra suave con desplazamiento vertical y difuminado */
+  --color-text-primary: #000000; /*Color principal para textos (títulos, contenido importante)*/
+  --color-text-secondary: #4a4a4a; /*Color para textos secundarios o menos destacados*/
+  --color-text-muted: #9b9b9b; /*Color para textos suaves (placeholders, ayudas, estados desactivados)*/
+  --color-bg-main: #f9f9f9; /*Color de fondo principal de la página*/
+  --color-bg-soft: #e0e0e0; /*Fondo alternativo para secciones o tarjetas*/
+  --color-accent-yellow: #ffce1b; /*Color llamativo (botones, highlights)*/
+  --color-accent-blue: #25c1dd; /*Color llamativo dos (links, hover, elementos interactivos)*/
+  --color-border: #cfe7f2; /*Color de bordes (inputs, cards, separadores)*/
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12); /*Sombra suave con desplazamiento vertical y difuminado*/
 
-  /* TIPOGRAFÍA*/
-  --font-family-main: 'Roboto', sans-serif; /* Fuente principal aplicada a todo el sitio */
-  --font-weight-light: 300; /* Peso ligero de la fuente */
-  --font-weight-regular: 400; /* Peso normal de la fuente */
-  --font-weight-medium: 500; /* Peso medio para dar énfasis */
-  --font-weight-bold: 700; /* Peso alto para títulos o elementos destacados */
-  --font-weight-black: 900; /* Peso máximo para títulos muy llamativos */
+  /*TIPOGRAFÍA*/
+  --font-family-main: 'Roboto', sans-serif; /*Fuente principal aplicada a todo el sitio*/
+  --font-weight-light: 300; /*Peso ligero de la fuente*/
+  --font-weight-regular: 400; /*Peso normal de la fuente*/
+  --font-weight-medium: 500; /*Peso medio para dar énfasis*/
+  --font-weight-bold: 700; /*Peso alto para títulos o elementos destacados*/
+  --font-weight-black: 900; /*Peso máximo para títulos muy llamativos*/
 
-  /* ESPACIADO // PADDING*/
-  --space-xs: 4px; /* Espaciado muy pequeño */
-  --space-sm: 8px; /* Espaciado pequeño */
-  --space-md: 16px; /* Espaciado estándar más utilizado */
-  --space-lg: 32px; /* Espaciado grande entre bloques */
-  --space-xl: 64px; /* Espaciado muy grande para separar secciones principales */
+  /*ESPACIADO // PADDING*/
+  --space-xs: 4px; /*Espaciado muy pequeño*/
+  --space-sm: 8px; /*Espaciado pequeño*/
+  --space-md: 16px; /*Espaciado estándar más utilizado*/
+  --space-lg: 32px; /*Espaciado grande entre bloques*/
+  --space-xl: 64px; /*Espaciado muy grande para separar secciones principales*/
 
   /*BORDES*/
-  --radius-sm: 4px; /* Bordes ligeramente redondeados */
-  --radius-md: 8px; /* Bordes redondeados estándar */
-  --radius-lg: 16px; /* Bordes más redondeados (cards, modales, contenedores grandes) */
+  --radius-sm: 4px; /*Bordes ligeramente redondeados*/
+  --radius-md: 8px; /*Bordes redondeados estándar*/
+  --radius-lg: 16px; /*Bordes más redondeados (cards, modales, contenedores grandes)*/
 
-  /* TRANSICIONES*/
-  --transition-fast: 0.2s ease-in-out; /* Transición rápida*/
-  --transition-normal: 0.3s ease-in-out; /* Transición estándar para animaciones suaves */
+  /*TRANSICIONES*/
+  --transition-fast: 0.2s ease-in-out; /*Transición rápida*/
+  --transition-normal: 0.3s ease-in-out; /*Transición estándar para animaciones suaves*/
   --transition-slow: 0.7s ease-in-out; /*Transición lenta para animaciones lentas*/
 }
 
-/* MODO OSCURO */
+
+/*MODO OSCURO*/
 .dark-mode {
-  --color-text-primary: #ffffff; /* Color principal para textos en modo oscuro */
-  --color-text-secondary: #d1d1d1; /* Color para textos secundarios o menos destacados en modo oscuro */
-  --color-bg-main: #2c2c2c; /* Color de fondo principal de la página en modo oscuro */
-  --color-bg-soft: #1e1e1e; /* Fondo alternativo para secciones o tarjetas en modo oscuro */
-  --color-accent-yellow: #ffdb4d; /* Color llamativo en modo oscuro */
-  --color-accent-blue: #4ad3ea; /*  Color llamativo dos en modo oscuro */
-  --color-border: #333333; /* Color de bordes en modo oscuro */
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra más intensa para destacar elementos en modo oscuro */
+  --color-text-primary: #ffffff; /*Color principal para textos en modo oscuro*/
+  --color-text-secondary: #d1d1d1; /*Color para textos secundarios o menos destacados en modo oscuro*/
+  --color-bg-main: #2c2c2c; /*Color de fondo principal de la página en modo oscuro*/
+  --color-bg-soft: #1e1e1e; /*Fondo alternativo para secciones o tarjetas en modo oscuro*/
+  --color-accent-yellow: #ffdb4d; /*Color llamativo en modo oscuro*/
+  --color-accent-blue: #4ad3ea; /*Color llamativo dos en modo oscuro*/
+  --color-border: #333333; /*Color de bordes en modo oscuro*/
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.5); /*Sombra más intensa para destacar elementos en modo oscuro*/
 }
 
-/* variables de Body tema oscuro */
+/*Variables de Body tema oscuro*/
 body {
-  background-color: var(--color-bg-main); /* color de fondo */
-  color: var(--color-text-primary); /* El texto cambia de color en modo oscuro */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Para suavizar el cambio de colores al activar el modo oscuro */
-  margin: 0; /* Elimina el margen por defecto del navegador */
+  background-color: var(--color-bg-main); /*Color de fondo*/
+  color: var(--color-text-primary); /*El texto cambia de color en modo oscuro*/
+  transition: background-color 0.3s ease, color 0.3s ease; /*Para suavizar el cambio de colores al activar el modo oscuro*/
+  margin: 0; /*Elimina el margen por defecto del navegador*/
 }
 
-/* Los textos */
+/*Los textos*/
 h1, h2, h3, h4, span {
-  color: var(--color-accent-blue); /* El texto cambia de color en modo oscuro */
+  color: var(--color-text-primary); /*El texto cambia de color en modo oscuro*/
 }
 
-/* tarjetas de Skills */
+/*Tarjetas de SKILLS*/
 .skill-card {
-  background-color: var(--color-bg-soft); /* Para que en modo oscuro sea gris oscuro */
-  color: var(--color-text-primary); /*color del texto de las tarjetas*/
-  border: 1px solid var(--color-border); /*color del borde de las tarjetas*/
+  background-color: var(--color-bg-soft); /*Para que en modo oscuro sea gris oscuro*/
+  color: var(--color-text-primary); /*Color del texto de las tarjetas*/
+  border: 1px solid var(--color-border); /*Color del borde de las tarjetas*/
 }
 
-/* Botón del tema oscuro*/
+/*Botón del tema oscuro*/
 .theme-btn {
-  padding: var(--space-sm); /*espacio entre el texto y los bordes del botón*/
-  background-color: var(--color-bg-soft); /* Para que en modo oscuro sea gris oscuro */
-  color: var(--color-text-primary); /*color del texto del botón*/
-  border: 1px solid var(--color-border); /*color del borde del botón*/
-  border-radius: var(--radius-md); /*redondeo de las esquinas*/
-  cursor: pointer; /* Cambia el cursor al pasar por el botón */
-  display: flex; /*para colocar el icono y el texto uno junto al otro*/
-  align-items: center; /* para centrar el icono verticalmente */
-  transition: transform var(--transition-normal); /* Para el efecto de "bote" */
+  padding: var(--space-sm); /*Espacio entre el texto y los bordes del botón*/
+  background-color: var(--color-bg-soft); /*Para que en modo oscuro sea gris oscuro*/
+  color: var(--color-text-primary); /*Color del texto del botón*/
+  border: 1px solid var(--color-border); /*Color del borde del botón*/
+  border-radius: var(--radius-md); /*Redondeo de las esquinas*/
+  cursor: pointer; /*Cambia el cursor al pasar por el botón*/
+  display: flex; /*Para colocar el icono y el texto uno junto al otro*/
+  align-items: center; /*Para centrar el icono verticalmente*/
+  transition: transform var(--transition-normal); /*Para el efecto de "bote"*/
 }
+
 
 
 
 /*MENÚ - NAVEGACIÓN*/
 .menuNavegacion {
-  display: flex;  /*pone los elementos uno junto al otro*/
-  justify-content: space-between; /* Empuja el logo a un lado y el ul al otro */
-  align-items: center;  /* Los centra verticalmente */
-  flex-direction: row;   /* logo a la izquierda y menu a la derecha */
-  padding: 10px 5%; /* Menú estrecho */
-  background-color: var(--color-bg-main); /*color de fondo*/  
-  border-bottom: 1px solid var(--color-border); /*color del borde de la caja del menu*/
-  border-radius: var(--radius-sm); /*redondeo de las esquinas*/
-  box-shadow: var(--shadow-soft); /*sombreado de la caja menu*/
-  position: fixed; /* Para "anclarlo" a la pantalla */
+  display: flex;  /*Pone los elementos uno junto al otro*/
+  justify-content: space-between; /*Empuja el logo a un lado y el ul al otro*/
+  align-items: center;  /*Los centra verticalmente*/
+  flex-direction: row;   /*Logo a la izquierda y menu a la derecha*/
+  padding: 10px 5%; /*Menú estrecho*/
+  background-color: var(--color-bg-main); /*Color de fondo*/  
+  border-bottom: 1px solid var(--color-border); /*Color del borde de la caja del menu*/
+  border-radius: var(--radius-sm); /*Redondeo de las esquinas*/
+  box-shadow: var(--shadow-soft); /*Sombreado de la caja menu*/
+  position: fixed; /*Para "anclarlo" a la pantalla*/
   top: 0; /*para alinearla al borde superior*/
-  width: 100%; /*ancho del tamaño maximo*/
-  z-index: 1000; /*para que quede superpuesto al resto de elementos*/
-  font-family: var(--font-family-main); /*tipografía*/
+  width: 100%; /*Ancho del tamaño maximo*/
+  z-index: 1000; /*Para que quede superpuesto al resto de elementos*/
+  font-family: var(--font-family-main); /*Tipografía*/
 }
 
 .menuNavegacion ul {
-  display: flex; /*pone los elementos uno junto al otro*/
-  margin: 0; /*quitamos margenes*/
-  padding: 0; /*quitamos margenes*/
-  gap: 15px; /*distancia entre los items*/
+  display: flex; /*Pone los elementos uno junto al otro*/
+  margin: 0; /*Quitamos margenes*/
+  padding: 0; /*Quitamos espacios*/
+  gap: 15px; /*Distancia entre los items*/
 }
 
 .menuNavegacion li {
-  padding: var(--space-xs)  /* Crea el área clickeable */
+  padding: var(--space-xs)  /*Crea el área clickeable*/
 }
 
 .menuNavegacion li a {
-  position: relative; /*para posicionar la linea respecto al texto*/
-  text-decoration: none; /*para quitar cualquier decoración por defecto*/
-  color: var(--color-text-primary); /*color del texot*/
-  font-size: 20px; /*tamaño del texto*/
+  position: relative; /*Para posicionar la linea respecto al texto*/
+  text-decoration: none; /*Para quitar cualquier decoración por defecto*/
+  color: var(--color-text-primary); /*Color del texot*/
+  font-size: 20px; /*Tamaño del texto*/
 }
 
 .menuNavegacion li a::after {
-  content: ""; /*para crear una caja invisible y vacia para la linea*/
-  position: absolute; /*para separar las lineas del texto*/
-  left: 0; /*eje horizontal, alineado izquierda*/
-  bottom: -4px; /* Aquí la SEPARACIÓN con el texto */
-  width: 0;  /* Empieza sin ancho para que no se vea */
-  height: 3px; /* Grosor de la línea */
-  background-color: var(--color-accent-yellow); /* color amarillo para la linea */
-  transition: width var(--transition-slow) /* La animación */
+  content: ""; /*Para crear una caja invisible y vacia para la linea*/
+  position: absolute; /*Para separar las lineas del texto*/
+  left: 0; /*Eje horizontal, alineado izquierda*/
+  bottom: -4px; /*Aquí la SEPARACIÓN con el texto*/
+  width: 0;  /*Empieza sin ancho para que no se vea*/
+  height: 3px; /*Grosor de la línea*/
+  background-color: var(--color-accent-yellow); /*Color amarillo para la linea*/
+  transition: width var(--transition-slow) /*La animación*/
 }
 
 .menuNavegacion li a:hover::after {
-  width: 100%; /* Al pasar el ratón, la línea crece hasta el 100% */
+  width: 100%; /*Al pasar el ratón, la línea crece hasta el 100%*/
 }
 
 .logo {
-  text-decoration: none; /*para quitar subrayados o decoración ya establecida*/
-  color: var(--color-accent-blue); /*color del texto*/
-  font-family: var(--font-family-main); /*tipografía*/
-  font-size: 20px; /*tamaño del texo*/
-  font-weight: var(--font-weight-bold); /*para resaltar el texto tipo negrita*/
-  padding: 5px 10px; /*margenes*/
-  border: 2px solid var(--color-accent-blue); /* Un pequeño recuadro para el logo */
-  border-radius: var(--radius-sm); /*borde del cuadro*/
-  transition: all var(--transition-normal) /*tiempo de la animación*/
+  text-decoration: none; /*Para quitar subrayados o decoración ya establecida*/
+  color: var(--color-accent-blue); /*Color del texto*/
+  font-family: var(--font-family-main); /*Tipografía*/
+  font-size: 20px; /*Tamaño del texto*/
+  font-weight: var(--font-weight-bold); /*Para resaltar el texto tipo negrita*/
+  padding: 5px 10px; /*Margenes*/
+  border: 2px solid var(--color-accent-blue); /*Un pequeño recuadro para el logo*/
+  border-radius: var(--radius-sm); /*Borde del cuadro*/
+  transition: all var(--transition-normal) /*Tiempo de la animación*/
 }
 
 .logo:hover {
-  background-color: var(--color-accent-blue); /*color de fondo al pasar el raton*/
-  color: var(--color-bg-main); /*color del texto al pasar el raton*/
+  background-color: var(--color-accent-blue); /*Color de fondo al pasar el raton*/
+  color: var(--color-bg-main); /*Color del texto al pasar el raton*/
 }
 
 
 /*MENU DESPLEGABLE HAMBURGUESA para pantallas pequeñas*/
 .hamburguesa {
-  display: none; /*oculto por defecto, se muestra solo en pantallas pequeñas con media query*/
-  flex-direction: column; /*coloca los elementos uno sobre otro*/
-  justify-content: space-around; /*espacio igual entre los elementos*/
-  width: 30px; /*ancho del botón de hamburguesa*/
-  height: 25px; /* alto del botón de hamburguesa*/
-  background: transparent; /*fondo transparente para que solo se vean las líneas*/
-  border: none; /* sin borde */
-  cursor: pointer;/*cambia el cursor al pasar por el botón*/
-  padding: 0; /*sin padding para que el tamaño del botón sea el definido por width y height*/
-  z-index: 1001; /*para que quede por encima del menú desplegable*/
+  display: none; /*Oculto por defecto, se muestra solo en pantallas pequeñas con media query*/
+  flex-direction: column; /*Coloca los elementos uno sobre otro*/
+  justify-content: space-around; /*Espacio igual entre los elementos*/
+  width: 30px; /*Ancho del botón de hamburguesa*/
+  height: 25px; /*Alto del botón de hamburguesa*/
+  background: transparent; /*Fondo transparente para que solo se vean las líneas*/
+  border: none; /*Sin borde*/
+  cursor: pointer;/*Cambia el cursor al pasar por el botón*/
+  padding: 0; /*Sin padding para que el tamaño del botón sea el definido por width y height*/
+  z-index: 1001; /*Para que quede por encima del menú desplegable*/
 }
 
 .hamburguesa span {
-  width: 30px; /*ancho de las líneas de la hamburguesa*/
-  height: 3px; /*grosor de las líneas de la hamburguesa*/ 
-  background-color: var(--color-accent-blue); /*color de las líneas de la hamburguesa*/
-  border-radius: 10px; /*redondeo de las líneas de la hamburguesa*/
-  transition: all 0.3s linear; /*transición para la animación de la hamburguesa*/
-}
-
-@media (max-width: 768px) {
-  .hamburguesa {
-    display: flex; /*muestra el botón de hamburguesa en pantallas pequeñas*/
-    order: 2; /* Para moverlo a la derecha si es necesario */
-  }
-
-  .theme-btn {
-    order: 1; /* Para moverlo a la izquierda de la hamburguesa */
-    margin-right: 15px; /* Espacio entre el botón de modo oscuro y la hamburguesa */
-  }
-
-  .menuNavegacion ul {
-    position: fixed; /* Para que el menú se superponga al contenido */
-    top: 0; /* Alineado al borde superior */
-    right: -100%; /* Escondido a la derecha */
-    width: 70%;   /* Ocupa el 70% del ancho */
-    height: 100%; /* Ocupa toda la altura de la pantalla */
-    background-color: var(--color-bg-soft);  /*color de fondo del menú desplegable*/
-    flex-direction: column; /* Enlaces uno debajo de otro */
-    align-items: center; /* Centra los enlaces horizontalmente */
-    justify-content: center; /* Centra los enlaces verticalmente */
-    transition: right 0.4s ease-in-out; /* Animación para deslizar el menú */
-    box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* Sombra para dar profundidad al menú desplegable */
-    z-index: 999; /* Para que el menú quede debajo del botón de hamburguesa pero encima del resto del contenido */
-  }
-
-  /* Cuando el menú tenga la clase 'open', se desliza hacia adentro */
-  .menuNavegacion ul.open {
-    right: 0; /* Se muestra el menú al moverlo a la posición visible */
-  }
-
-  .menuNavegacion li {
-    margin: 20px 0; /* Espacio vertical entre los enlaces en el menú desplegable */
-  }
-
-  .menuNavegacion li a {
-    font-size: 24px; /* Texto más grande para dedos */
-  }
+  width: 30px; /*Ancho de las líneas de la hamburguesa*/
+  height: 3px; /*Grosor de las líneas de la hamburguesa*/ 
+  background-color: var(--color-accent-blue); /*Color de las líneas de la hamburguesa*/
+  border-radius: 10px; /*Redondeo de las líneas de la hamburguesa*/
+  transition: all 0.3s linear; /*Transición para la animación de la hamburguesa*/
 }
 
 
-/*FOOTER - PIE DE PAGINA*/
+
+
+/*FOOTER - PIE DE PAGINA: aplicamos junto estilos claros y oscuros para mantener la misma apariencia */
 footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
-  display: flex; /* coloca elementos uno junto al otro */
-  flex-direction: column; /*columna con botones arriba y texto abajo*/
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;  /* Centra verticalmente */
-  flex-wrap: wrap; /* Permite que los botones bajen si no caben en el móvil */
-  padding: var(--space-lg) 5%; /* Menú estrecho */
-  gap: var(--space-md); /* Espacio entre items*/
-  width: 100%; /* Asegura que ocupe todo el ancho para poder centrarlo */
+  display: flex; /*Coloca elementos uno junto al otro*/
+  flex-direction: column; /*Columna con botones arriba y texto abajo*/
+  justify-content: center;  /*Centra horizontalmente*/
+  align-items: center;  /*Centra verticalmente*/
+  flex-wrap: wrap; /*Permite que los botones bajen si no caben en el móvil*/
+  padding: var(--space-lg) 5%; /*Menú estrecho*/
+  gap: var(--space-md); /*Espacio entre items*/
+  width: 100%; /*Asegura que ocupe todo el ancho para poder centrarlo*/
   font-family: var(--font-family-main);  /*Tipografía*/
-  background-color: #000000 !important; /*color de la caja siempre negro*/
-  border-top-left-radius: var(--radius-md); /*redondea la esquina superior izquierda*/
-  border-top-right-radius: var(--radius-md); /*redonde la esquina superior derecha*/
+  background-color: #222222 !important; /*Color de la caja siempre negro*/
+  border-top-left-radius: var(--radius-md); /*Redondea la esquina superior izquierda*/
+  border-top-right-radius: var(--radius-md); /*Redonde la esquina superior derecha*/
   box-shadow: var(--shadow-soft);  /*Para dar sombra*/
-  box-sizing: border-box; /* Importante para que el padding no ensanche la web */
+  box-sizing: border-box; /*Importante para que el padding no ensanche la web*/
 }
 
 .botones-pie, .dark-mode .botones-pie {
-  display: flex; /*coloca los elementos uno junto al otro*/
-  gap: 20px; /*espacio entre items*/
-  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  justify-content: center; /*cenra horizontalmente*/
+  display: flex; /*Coloca los elementos uno junto al otro*/
+  gap: 20px; /*Espacio entre items*/
+  flex-wrap: wrap; /*Permite que los objetos bajen si no caben en el móvil*/
+  justify-content: center; /*Centra horizontalmente*/
   }
 
 .pie-de-pagina a, .dark-mode .pie-de-pagina a {
-  display: inline-block;  /*Colocar elementos uno al lado del otro, con control de tamaño */
-  text-decoration: none; /*para quitar subrayads o decoración ya establecida*/
-  font-weight: var(--font-weight-bold); /*peso de la fuente*/
-  color: white; /*color del texto*/
-  font-size: 16px; /*tamaño del texo*/
-  padding: 8px 18px; /*margenes*/
-  border-radius: 7px; /*borde del cuadro*/
-  background-color: transparent; /*fondo de color transparente*/
-  transition: color  var(--transition-normal);  /* Velocidad para la animación */
+  display: inline-block; /*Colocar elementos uno al lado del otro, con control de tamaño*/
+  text-decoration: none; /*Para quitar subrayads o decoración ya establecida*/
+  font-weight: var(--font-weight-bold); /*Peso de la fuente*/
+  color: white; /*Color del texto*/
+  font-size: 16px; /*Tamaño del texto*/
+  padding: 8px 18px; /*Márgenes*/
+  border-radius: 7px; /*Borde del cuadro*/
+  background-color: transparent; /*Fondo de color transparente*/
+  transition: color  var(--transition-normal);  /*Velocidad para la animación*/
 }
 
 .pie-de-pagina a:hover, .dark-mode .pie-de-pagina a:hover {
-  color: var(--color-accent-blue); /*color del texto*/
+  color: var(--color-accent-blue); /*Color del texto*/
 }
 
 .pie-de-pagina p, .dark-mode .pie-de-pagina p {
-  color: white; /* Texto de copyright en blanco */
-  font-size: 16px; /*tamaño de la fuente*/
+  color: white; /*Texto de copyright en blanco*/
+  font-size: 16px; /*Tamaño de la fuente*/
 }
 
 .corazon, .dark-mode .corazon {
-  display: inline-block; /*alinea los elementos uno junto al otro*/
-  animation: latido 1.5s infinite; /*la animacion no se detiene*/
-  color: red; /*color del corazon*/
+  display: inline-block; /*Alinea los elementos uno junto al otro*/
+  animation: latido 1.5s infinite; /*La animacion no se detiene*/
+  color: red; /*Color del corazon*/
 }
 
+/*Animación de latido para el corazón*/
 @keyframes latido {
-  0% { transform: scale(1); }    /* Inicio en calma */
-  25% { transform: scale(1.1); }  /* Primer latido suave */
-  50% { transform: scale(1.05); } /* Pequeña relajación intermedia */
-  75% { transform: scale(1.2); }  /* Segundo latido más fuerte */
-  100% { transform: scale(1); }    /* Vuelve al inicio para repetir sin pausa */
+  0% { transform: scale(1); }    /*Inicio en calma*/
+  25% { transform: scale(1.1); }  /*Primer latido suave*/
+  50% { transform: scale(1.05); } /*Latido fuerte*/
+  75% { transform: scale(1.2); }  /*Segundo latido más fuerte */
+  100% { transform: scale(1); }    /*Vuelve al inicio para repetir sin pausa */
 }
+
+
 
 
 /*INDEX - HOME*/
-.contenedor-cabecera {
-  display: flex; /*pone las sections una junto a la otra*/
-  flex-direction: column; /*una seccion sobre la otra*/
-  min-height: 100vh; /*ocupa todo el alto de la pagina*/
-  width: 100%; /*ocupa todo el ancho de su caja*/
-  justify-content: center; /* centra las secciones verticalmente*/
-  margin: 70px auto; /*margen para evitar que el menú tape el conyenido*/
-  box-sizing: border-box; /*incluye el padding y bordes en el cálculo del ancho total */
+/*Forzamos el modo fila */
+.contenedor-hero {
+  display: flex; /*Coloca los elementos uno junto al otro*/
+  flex-direction: row; /*Fuerza horizontal*/
+  align-items: center; /*Alinea verticalmente al centro*/
+  justify-content: center; /*Justifica horizontalmente al centro*/
+  gap: 40px; /*Espacio entre la imagen y el texto*/
+  padding: 50px;/*Espacio interno para que no toque los bordes*/
+  margin-top: 100px; /*Para que el header no lo tape*/
+  max-width: 1200px;/*Limita el ancho máximo para que no se vea raro en pantallas muy grandes*/
 }
 
-.cabecera {
-  display: flex;  /* Coloca los elementos uno al lado del otro */
-  align-items: center;  /* Centra todo horizontalmente */
-  justify-content: center;  /* Centra todo verticalmente */
-  text-align: left; /*alinea el texto*/
-  min-height: 100%;  /* Ocupa todo el alto de la pantalla */
-  gap: var(--space-md);/* Espaciado igual entre elementos */
-  padding: var(--space-xl);  /* Márgenes laterales para que el texto no toque los bordes, porcentaje para diseño responsivo */
+/*Forzamos el círculo */
+.contenedor-hero img {
+  width: 400px; /*Ancho fijo para mantener la forma circular*/
+  height: 400px; /*Altura igual al ancho para que sea un cuadrado */
+  object-fit: cover; /*Evita que se estire la imagen*/
+  border-radius: 50%; /*Para hacer la imagen circular*/ 
+  display: block; /*Convierte el elemento en un bloque para evitar espacios no deseados*/
+  flex-shrink: 0; /*Evita que el texto la aplaste*/
+  box-shadow: var(--shadow-soft); /*Sombra para darle profundidad a la imagen*/
 }
 
-.cabecera img {
-  max-width: 100%; /*ancho maximo*/
-  width: min(400px, 90%); /*ancho*/
-  height: auto; /* Permite que la altura se ajuste automáticamente para no deformarse */
-  aspect-ratio: 1 / 1; /* Fuerza a que la imagen sea siempre un cuadrado perfecto */  object-fit: cover;  /* recorta imagen y no se deforma */
-  border-radius: 50%; /*esquinas redondeadas*/
-  box-shadow: var(--shadow-soft); /*sombra suabre*/
+.texto-hero {
+  flex: 1; /*Ocupa el espacio restante*/
+  max-width: 600px; /*Limita el ancho del texto para que no se vea raro en pantallas grandes*/
 }
 
-.texto-cabecera {
-  display: flex; /*pone un objeto junto al otro*/
-  flex-direction: column; /*pone un objeto bajo el otro*/
-  gap: var(--space-md); /*distancia entre elememtos*/
-}
-
-.cabecera h1 {
-  text-align: left;  /* Centra el texto de los títulos y párrafos */
-  font-family: var(--font-family-main);  /*Tipografía*/
-  font-size: 60px; /*tamaño de fuente*/
+.texto-hero h1 {
+  text-align: left; /*Centra el texto de los títulos y párrafos*/
   color: var(--color-accent-blue);  /*Color del texto con mis colores*/
-  margin: 0; /* Elimina márgenes por defecto */
+  margin: 0; /*Elimina márgenes por defecto*/
 }
 
-.cabecera h2 {
-  font-family: var(--font-family-main);  /*Tipografía*/
-  font-size: 50px; /*tamaño de fuente*/
-  color: var(--color-accent-yellow);  /* Color del texto con mis colores*/
-  margin: 0; /* Elimina márgenes por defecto */
+.texto-hero h2 {
+  color: var(--color-accent-yellow);  /*Color del texto con mis colores*/
+  margin: 0; /*Elimina márgenes por defecto*/
+  text-align: left; /*Alinea el texto a la izquierda*/
 }
 
-.cabecera p {
-  font-family: var(--font-family-main);  /*Tipografía*/
-  text-align: justify; /*justifica el texto*/
-  color: var(--color-text-primary);  /*color de la topografia*/
+.texto-hero p {
+  font-family: var(--font-family-main); /*Tipografía*/
+  text-align: justify; /*Justifica el texto*/
+  color: var(--color-text-primary);  /*Color de la topografia*/
   max-width: 700px;  /*Limita el ancho del texto para una mejor lectura*/
   line-height: 1.6;  /*Define el espacio entre lineas*/
-  font-size: 18px; /*tamaño de la fuente*/
+  font-size: 20px; /*Tamaño de la fuente*/
   margin: 0;  /*Para "resetear" el margen preestablecido que puede haber*/
 }
 
-.cabecerabotones {
-  display: flex; /*pone un elemento junto al otro*/
-  gap: var(--space-md); /*espacio etre los elementos*/
-  justify-content: right;/*alinea los botones a la derecha*/
-  margin-bottom: var(--space-md); /*margen inferior para separar los botones del resto del contenido*/
+.botones-hero {
+  display: flex; /*Pone un elemento junto al otro*/
+  gap: var(--space-md); /*Espacio etre los elementos*/
+  justify-content: right;/*Alinea los botones a la derecha*/
+  margin-bottom: var(--space-xl); /*Margen inferior para separar los botones del resto del contenido*/
 }
 
-.cabecerabotones a {
-  display: inline-block;  /*Colocar elementos uno al lado del otro, con control de tamaño */
-  color: var(--color-accent-blue); /*color del texto*/
-  font-size: 14px; /*tamaño del texo*/
-  padding: 8px 18px; /*margenes*/
-  border: 1px solid var(--color-accent-blue); /* Un pequeño recuadro para el logo */
-  border-radius: 7px; /*borde del cuadro*/
-  background-color: transparent; /*fondo de color transparente*/
-  transition: all var(--transition-normal);  /* Velocidad para la animación */
+.botones-hero a {
+  display: inline-block; /*Colocar elementos uno al lado del otro, con control de tamaño*/
+  color: var(--color-accent-blue); /*Color del texto*/
+  font-size: 14px; /*Tamaño del texo*/
+  padding: 8px 18px; /*Margenes*/
+  border: 1px solid var(--color-accent-blue); /*Un pequeño recuadro para el logo*/
+  border-radius: 7px; /*Borde del cuadro*/
+  background-color: transparent; /*Fondo de color transparente*/
+  transition: all var(--transition-normal); /*Velocidad para la animación*/
 }
 
-.cabecerabotones a:hover{
-  color: var(--color-bg-main); /*color del texto*/
-  transform: translateY(-2px); /*para que suba*/
+.botones-hero a:hover{
+  color: var(--color-bg-main); /*Color del texto*/
+  transform: translateY(-2px); /*Para que suba*/
   background-color: var(--color-accent-blue); /*Cambia el color de fonde del boton a gris claro*/
-  box-shadow: var(--shadow-soft); /*sombra de la caja*/
-  transition: all var(--transition-normal);  /* Velocidad para la animación */
+  box-shadow: var(--shadow-soft); /*Sombra de la caja*/
+  transition: all var(--transition-normal); /*Velocidad para la animación */
 }
 
-/* SKILLS, PROYECTOS Y CHEATSHEETS */
-#skills h2, #proyectos h2, #cheatsheets h2 {
+
+
+
+/*SKILLS, PROYECTOS Y CHEATSHEETS*/
+#skills h3, #proyectos h3, #cheatsheets h3 {
   display: block; /*Se comporta como un bloque sólido*/
-  font-size: 30px; /*tamaño*/
-  font-weight: var(--font-weight-bold); /*grosor*/
-  color: var(--color-text-primary); /*color*/
-  border-bottom: 4px solid var(--color-accent-yellow); /*linea*/
-  width: fit-content; /* la línea medirá lo que mida el texto */
-  margin: 0; /*distancia con el margen*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Línea*/
+  width: fit-content; /*La línea medirá lo que mida el texto */
+  margin: 0; /*Distancia con el margen*/
 }
 
+
+/*SKILLS*/
 #skills-container {
-  display: flex; /*pone los elementos uno junto al otro*/
-  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  gap: var(--space-md); /*espacio entre los objetos*/
-  padding: var(--space-lg) 0; /*espacio con la parte de arriba y abajo*/
+  display: flex; /*Pone los elementos uno junto al otro*/
+  flex-wrap: wrap; /*Permite que los objetos bajen si no caben en el móvil*/
+  gap: var(--space-md); /*Espacio entre los objetos*/
+  padding: var(--space-lg) 0; /*Espacio con la parte de arriba y abajo*/
 }
 
 .skill-card {
-  flex: 1 1 calc(25% - var(--space-md)); /*para que cada tarjeta ocupe el 25% del contenedor menos el espacio entre tarjetas*/
-  min-width: 220px; /*ancho mínimo para que las tarjetas no se vuelvan demasiado pequeñas en pantallas pequeñas*/
-  background: var(--color-bg-main); /*color de fondo de la tarjeta*/
-  border-radius: var(--radius-md); /*redondeo de las esquinas de la tarjeta*/
-  padding: var(--space-md); /*espacio entre el contenido y los bordes de la tarjeta*/
-  box-shadow: var(--shadow-soft); /*sombra de la tarjeta para darle profundidad*/
+  flex: 1 1 calc(25% - var(--space-md)); /*Para que cada tarjeta ocupe el 25% del contenedor menos el espacio entre tarjetas*/
+  min-width: 220px; /*Ancho mínimo para que las tarjetas no se vuelvan demasiado pequeñas en pantallas pequeñas*/
+  background: var(--color-bg-main); /*Color de fondo de la tarjeta*/
+  border-radius: var(--radius-md); /*Redondeo de las esquinas de la tarjeta*/
+  padding: var(--space-md); /*Espacio entre el contenido y los bordes de la tarjeta*/
+  box-shadow: var(--shadow-soft); /*Sombra de la tarjeta para darle profundidad*/
 }
 
 .skill-icon {
-  width: 60px; /*tamaño del icono de la tarjeta*/
-  height: 60px; /*tamaño del icono de la tarjeta*/
-  margin-bottom: var(--space-md);/*espacio entre el icono y el título*/
+  width: 60px; /*Tamaño del icono de la tarjeta*/
+  height: 60px; /*Tamaño del icono de la tarjeta*/
+  margin-bottom: var(--space-md);/*Espacio entre el icono y el título*/
 }
 
 .skill-card h4 {
-  color: var(--color-text-primary); /*color del título de la tarjeta*/
-  font-size: 20px; /*tamaño del título de la tarjeta*/
-  font-weight: var(--font-weight-bold); /*grosor del título de la tarjeta*/
-  margin: var(--space-xs);/*espacio entre el título y el nivel de habilidad*/
+  color: var(--color-text-primary); /*Color del título de la tarjeta*/
+  margin: var(--space-xs);/*Espacio entre el título y el nivel de habilidad*/
 }
 
 .skill-nivel {
-  color: var(--color-accent-blue); /*color del nivel de habilidad*/
-  font-weight: var(--font-weight-medium);/*para resaltar el nivel de habilidad*/
-  font-size: 16px; /*tamaño del nivel de habilidad*/
-  margin-bottom: var(--space-xs);/*espacio entre el nivel de habilidad y las etiquetas de habilidades*/
-  text-transform: uppercase; /*para que el nivel de habilidad esté en mayúsculas*/
-  letter-spacing: 1px; /*espacio entre letras para mejorar la legibilidad del nivel de habilidad*/
+  color: var(--color-accent-blue); /*Color del nivel de habilidad*/
+  font-weight: var(--font-weight-medium);/*Para resaltar el nivel de habilidad*/
+  font-size: 14px; /*Tamaño del nivel de habilidad*/
+  margin-bottom: var(--space-xs);/*Espacio entre el nivel de habilidad y las etiquetas de habilidades*/
+  text-transform: uppercase; /*Para que el nivel de habilidad esté en mayúsculas*/
+  letter-spacing: 1px; /*Espacio entre letras para mejorar la legibilidad del nivel de habilidad*/
 }
 
 .skill-descripcion {
-  font-size: 14px; /*tamaño de la descripción de la tarjeta*/
-  color: var(--color-text-secondary); /*color de la descripción de la tarjeta*/
-  line-height: 1.5; /*espacio entre líneas para mejorar la legibilidad de la descripción de la tarjeta*/
-  margin-bottom: var(--space-sm); /*espacio entre la descripción de la tarjeta y el nivel de habilidad*/
+  font-size: 14px; /*Tamaño de la descripción de la tarjeta*/
+  color: var(--color-text-secondary); /*Color de la descripción de la tarjeta*/
+  line-height: 1.5; /*Espacio entre líneas para mejorar la legibilidad de la descripción de la tarjeta*/
+  margin-bottom: var(--space-sm); /*Espacio entre la descripción de la tarjeta y el nivel de habilidad*/
 }
 
 .skill-tags {
-  display: flex; /*coloca los elementos uno junto al otro*/
-  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  gap: var(--space-sm); /*espacio entre las etiquetas de habilidades*/
-  margin-top: var(--space-md); /*espacio entre el nivel de habilidad y las etiquetas de habilidades*/
+  display: flex; /*Coloca los elementos uno junto al otro*/
+  flex-wrap: wrap; /*Permite que los objetos bajen si no caben en el móvil*/
+  gap: var(--space-sm); /*Espacio entre las etiquetas de habilidades*/
+  margin-top: var(--space-md); /*Espacio entre el nivel de habilidad y las etiquetas de habilidades*/
 }
 
 .tags {
-  background: var(--color-bg-soft); /*color de fondo de las etiquetas de habilidades*/
-  padding: var(--space-sm); /*espacio entre el texto y los bordes de las etiquetas de habilidades*/
-  border-radius: var(--radius-sm);/*redondeo de las esquinas de las etiquetas de habilidades*/
-  font-size: 12px; /*tamaño del texto de las etiquetas de habilidades*/
-  color: var(--color-text-primary); /*color del texto de las etiquetas de habilidades*/
+  background: var(--color-bg-soft); /*Color de fondo de las etiquetas de habilidades*/
+  padding: var(--space-sm); /*Espacio entre el texto y los bordes de las etiquetas de habilidades*/
+  border-radius: var(--radius-sm);/*Redondeo de las esquinas de las etiquetas de habilidades*/
+  font-size: 12px; /*Tamaño del texto de las etiquetas de habilidades*/
+  color: var(--color-text-primary); /*Color del texto de las etiquetas de habilidades*/
 }
 
 
-/*FORMULARIO DE CONTACTO*/
-.formulario-contacto {
-  display: flex; /*coloca los elementos uno al lado de otro*/
-  flex-direction: column; /*para colocar un elemento sobre otro*/
-  align-items: center; /*centra los hijos horizontalmente*/
-  justify-content: center; /*centra los hijos verticalmente*/
-  margin: 70px auto; /*para que el header no lo tape*/
-  padding: var(--space-xl); /*separación entre elementos*/
-  background-color: var(--color-bg-main); /*color de fondo de la caja*/
-  border-radius: var(--space-md); /*redondeo de las esquinas de la caja*/
-  box-shadow: var(--shadow-soft); /*sombra de la caja*/
-  max-width: 900px; /* Una caja donde contacto se ve mejor */
-  width: 90%;  /* Para que en móviles no toque los bordes del teléfono */
-  font-family: var(--font-family-main); /*tipografia*/
+/*PROYECTO EN PROGRESO*/
+
+
+
+/*SECCIÓN DE TARJETAS CHEATSHEETS*/
+.cheatsheets-intro {
+  font-size: 20px; /*Tamaño*/
+  color: var(--color-text-secondary); /*Color*/
+  margin-top: var(--space-sm); /*Espacio con la parte de arriba*/
+  line-height: 1.6; /*Espacio entre lineas*/
 }
 
-.container-datos {
-  padding: var(--space-md); /*separación entre elementos*/
-  width: 90%; /*para que en móviles no toque los bordes del teléfono*/
-  box-sizing: border-box; /*para que el padding no ensanche la caja*/
-  }
-
-.formulario-contacto h1{
-  font-size: 60px; /*tamaño de la fuente*/
-  color: var(--color-text-secondary); /*color del texto*/
-  margin-bottom: var(--space-xl); /*distancia con el objeto de abajo*/
-  width: fit-content; /*la linea mide lo que mide el texto*/
-  border-bottom: 4px solid var(--color-accent-yellow); /*color de la linea*/
+#cheatsheets-container {
+  display: flex; /*Pone los elementos uno junto al otro*/
+  flex-wrap: wrap; /*Permite que los objetos bajen si no caben en el móvil*/
+  gap: var(--space-md); /*Espacio entre los objetos*/
+  align-items: start; /*Alinea los objetos verticalmente al inicio*/
+  margin-top: var(--space-md); /*Espacio con la parte de arriba*/
 }
 
-.formulario-contacto p {
-  color: var(--color-text-primary); /*color del texto*/
+.cheatsheets-card {
+  flex: 1 1 calc(25% - var(--space-md)); /*Para que cada tarjeta ocupe un cuarto del espacio disponible, restando el gap entre ellas*/
+  background-color: var(--color-bg-main); /*Color de fondo de la tarjeta*/
+  border-radius: var(--radius-md); /*Redondeo de las esquinas de la tarjeta*/
+  padding: var(--space-md); /*Espacio entre el contenido y los bordes de la tarjeta*/
+  box-shadow: var(--shadow-soft); /*Sombra de la tarjeta para darle profundidad*/
+  display: flex; /*Pone los elementos uno junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  align-items: center; /*Alinea los elementos en el centro*/
+  text-align: center; /*Alinea el texto al centro*/
+  text-decoration: none; /*Para quitar subrayados o decoración ya establecida*/
+  color: var(--color-text-primary); /*Color del texto*/
+  transition: all var(--transition-normal); /*Tiempo del efecto*/
+  margin-top: var(--space-md); /*Espacio con la parte de arriba*/
 }
 
-label {
-  display: block; /*para ocupar todo el ancho posible*/
-  margin-bottom: 8px; /*margen inferior entre elementos*/
-  font-family: var(--font-family-main); /*tipografía*/
-  color: var(--color-text-primary); /*color del texto*/
-  font-weight:var(--font-weight-bold); /*para que este en negrita*/
+.cheatsheets-card:hover {
+  transform: translateY(-4px); /*Para que suba*/
+  box-shadow: var(--shadow-soft); /*Sombra de la tarjeta para darle profundidad*/
 }
 
-input, textarea {
-width: 100%; /*ancho*/
-padding: var(--space-md); /*distancia entre elementos*/
-margin-bottom: 20px; /*distancia con la parte de abajo*/
-border: 1px solid var(--color-text-primary); /*color del borde de caja*/
-border-radius: var(--radius-md); /*redondear las esquinas*/
-font-family: var(--font-family-main); /*tipografía*/
-box-sizing: border-box; /*evita que input y textarea se salgan de la caja*/
-transition: var(--transition-normal); /*efecto para cuando escribe el usuario escribir*/
+.cheatsheets-icon-wrapper {
+  width: 60px; /*Tamaño del contenedor del icono*/
+  height: 60px; /*Tamaño del contenedor del icono*/
+  display: flex; /*Pone los elementos uno junto al otro*/
+  align-items: center; /*Alinea los elementos verticalmente en el centro*/
+  justify-content: center; /*Alinea los elementos horizontalmente en el centro*/
+  margin-bottom: var(--space-md); /*Espacio entre el contenedor del icono y el título de la tarjeta*/
 }
 
-/*EFECTO PARA CUANDO EL USUARIO VA A ESCRIBIR*/
-input:focus, textarea:focus {
-  outline: none; /*para quitar efectos prestablecidos de navegadores*/
-  border-color: var(--color-text-primary); /*color del borde de baja*/
-  box-shadow: var(--shadow-soft); /*color de la sobra*/
-}
-textarea {
-  resize: vertical; /* Permite estirar hacia abajo pero no hacia los lados */
+.cheatsheets-card .cheatsheets-icon {
+  width: 100%; /*Hace que el icono ocupe todo el espacio del contenedor*/
+  height: 100%; /*Hace que el icono ocupe todo el espacio del contenedor*/
+  object-fit: contain; /*Para que el icono se ajuste al contenedor sin deformarse*/
 }
 
-.botones-form {
-  display: flex; /* Ponemos los botones uno al lado del otro */
-  gap: var(--space-md); /* Espacio entre botones */
-  margin-top: var(--space-md); /* Separación con el campo anterior */
+.cheatsheets-card h4 {
+  color: var(--color-text-primary); /*Color del título de la tarjeta*/
+  margin-bottom: var(--space-xs); /*Margen entre el título de la tarjeta y la descripción*/
 }
 
-.boton-submit, .boton-reset {
-  flex: 1; /*hace que los dos botones midan lo mismo*/
-  cursor: pointer; /*convierte el cursor en una mano*/
-  border: 2px solid; /*borde de la caja*/
-  font-weight: var(--font-weight-bold); /*para resaltar el texto tipo negrita*/
-  padding: var(--space-md); /*espacio del texto con la caja*/
-  border-radius: var(--radius-sm); /*para redondear las esquinas*/
-  background-color: transparent; /*fondo transparente*/
-  transition: var(--transition-normal); /*tiempo del efecto*/
-}
-
-.boton-submit {
-  color: var(--color-text-primary); /*color del texto*/
-  border-color: transparent; /*borde transparente para que no se vea*/
-}
-
-.boton-submit:hover {
-  color: var(--color-bg-main); /*color del texto*/
-  transform: translateY(-4px); /*para que suba*/
-  background-color: var(--color-text-primary); /* Cambia a tu color oscuro al pasar el ratón */
-}
-
-.boton-reset {
-  color: var(--color-text-primary); /*color del texto*/
-  border-color: transparent; /*borde transparente para que no se vea*/
-}
-
-.boton-reset:hover {
-  color: var(--color-bg-main); /*color del texto*/
-  transform: translateY(-4px); /*para que suba*/
-  background-color: var(--color-text-primary); /* Cambia a tu color oscuro al pasar el ratón */
+.cheatsheets-card p {
+  font-size: 14px; /*Tamaño de la descripción de la tarjeta*/
+  color: var(--color-text-secondary); /*Color de la descripción de la tarjeta*/
 }
 
 
-/*ABOUT / PRESENTACION SOBRE MI */
+/*PÁGINAS CHEATSHEETS HTML CSS Y JS*/
+.cheatsheets-nav {
+  position: sticky; /*Para que el menú se quede fijo en la parte superior al hacer scroll*/
+  top: 66px; /*Para que el menú no se superponga con el header al hacer scroll*/
+  max-width: 1000px;/*No crecerá más de 1000px en pantallas grandes */
+  background-color: var(--color-bg-main); /*Color de fondo del menú*/
+  display: flex; /*Pone los elementos uno junto al otro*/
+  flex-wrap: wrap; /*Permite que los objetos bajen si no caben en el móvil*/
+  justify-content: center; /*Alinea los elementos horizontalmente en el centro*/
+  align-items: center; /*Alinea los elementos verticalmente en el centro*/
+  gap: var(--space-md); /*Espacio entre los elementos del menú*/
+  padding: var(--space-sm) var(--space-md); /*Espacio con la parte de arriba y abajo del menú*/
+  z-index: 100; /*Para que el menú se superponga a otros elementos al hacer scroll*/
+  border-radius: 0 0 var(--radius-md) var(--radius-md); /*Redondear las esquinas del menú 0 para las de arriba, var(--radius-md) para las de abajo*/
+  border-bottom: 2px solid var(--color-bg-soft); /*Línea inferior para separar el menú del contenido al hacer scroll*/
+  box-shadow: var(--shadow-soft); /*Sombra para darle profundidad al menú al hacer scroll*/
+  margin-left: auto !important; /*Para que el menú se alinee a la derecha en pantallas grandes, con !important para asegurar que se aplique esta regla incluso si hay otras reglas que intentan alinear el menú de otra manera*/
+  margin-right: auto !important; /*Para que el menú se alinee a la derecha en pantallas grandes, con !important para asegurar que se aplique esta regla incluso si hay otras reglas que intentan alinear el menú de otra manera*/
+}
+
+.cheatsheets-nav a {
+  color: var(--color-text-primary); /*Color del texto del menú*/
+  font-size: 14px; /*Tamaño del texto del menú*/
+  text-decoration: none; /*Para quitar subrayados o decoración ya establecida*/
+  padding: var(--space-sm) var(--space-md); /*Espacio con la parte de arriba y abajo, y con los lados del menú*/
+  border-radius: var(--radius-sm); /*Redondear las esquinas del menú*/
+  position: relative; /*Esto es el "ancla" para la línea*/
+  display: inline-block; /*Asegura que el padding y la posición funcionen bien*/
+  transition: all var(--transition-normal); /*Tiempo del efecto*/
+}
+
+.cheatsheets-nav a:hover {
+  color: var(--color-accent-yellow); /*Color del texto del menú al pasar el ratón*/
+}
+
+.cheatsheets-hero {
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  max-width: 1200px; /*Que sea el mismo para todos*/
+  margin: 0 auto; /*Distancia con el margen*/
+  padding: var(--space-xl) var(--space-md); /*Espacio con la parte de arriba y abajo, y con los lados*/
+  text-align: left; /*Alinea el texto a la izquierda*/
+}
+
+.cheatsheets-badge {
+  display: inline-block; /*Para que el badge se ajuste al contenido*/
+  background-color: var(--color-accent-blue); /*Color de fondo del badge*/
+  color: var(--color-bg-main); /*Color del texto del badge*/
+  font-size: 12px; /*Tamaño del texto del badge*/
+  font-weight: var(--font-weight-bold); /*Grosor del texto del badge*/
+  padding: var(--space-xs) var(--space-sm); /*Espacio con la parte de arriba y abajo, y con los lados del badge*/
+  border-radius: var(--radius-sm); /*Redondear las esquinas del badge*/
+  margin-top: var(--space-xl); /*Espacio con la parte de arriba*/
+  margin-bottom: var(--space-sm); /*Espacio con el elemento de abajo*/
+  width: fit-content; /*El badge se ajusta al contenido*/
+}
+
+.cheatsheet-hero h1 {
+  margin-bottom: var(--space-sm); /*Distancia con el margen*/
+  padding-bottom: var(--space-xs); /*Distancia parte inferior*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Color de la línea que subraya el título de la sección de cheatsheets*/
+  width: fit-content; /*La línea mide lo mismo que el título de la sección de cheatsheets*/
+}
+
+.cheatsheet-hero p {
+  font-size: 20px; /*Tamaño de la descripción de la sección de cheatsheets*/
+  color: var(--color-text-secondary); /*Color de la descripción de la sección de cheatsheets*/
+  line-height: 1.6; /*Espacio entre líneas para mejorar la legibilidad de la descripción de la sección de cheatsheets*/
+  margin-top: var(--space-md); /*Espacio con el título de la sección de cheatsheets*/
+  margin-bottom: var(--space-md); /*Espacio con el contenido de la sección de cheatsheets*/
+}
+
+.cheatsheets-contenido {
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  gap: var(--space-lg); /*Espacio entre los elementos de la sección de cheatsheets*/
+  max-width: 1200px; /*Que sea el mismo para todos*/
+  margin: 0 auto; /*Distancia con el margen*/
+  padding: var(--space-xl) var(--space-md); /*Espacio con la parte de arriba y abajo, y con los lados*/
+}
+
+.cheatsheets-carta {
+  background-color: var(--color-bg-main); /*Color de fondo de la carta de cheatsheets*/
+  border-radius: var(--radius-md); /*Redondear las esquinas de la carta de cheatsheets*/
+  box-shadow: var(--shadow-soft); /*Sombra de la carta de cheatsheets para darle profundidad*/
+  padding: var(--space-md); /*Espacio entre el contenido y los bordes de la carta de cheatsheets*/
+  margin-bottom: var(--space-lg); /*Espacio con el siguiente elemento de la sección de cheatsheets*/
+  scroll-margin-top: 200px; /*Para que al hacer scroll hacia esta carta, deje un espacio de 200px desde la parte superior de la pantalla, evitando que el título quede oculto por el menú fijo*/
+}
+
+.cheatsheets-carta h2 {
+  margin-bottom: var(--space-sm); /*Espacio con el siguiente elemento de la carta de cheatsheets*/
+}
+
+.cheatsheets-mini {
+  font-size: 16px; /*Tamaño de la descripción de la carta de cheatsheets*/
+  color: var(--color-text-secondary); /*Color de la descripción de la carta de cheatsheets*/
+  font-style: italic; /*Para poner la descripción de la carta de cheatsheets en cursiva*/
+  margin-bottom: var(--space-md); /*Espacio con el siguiente elemento de la carta de cheatsheets*/
+}
+
+.cheatsheets-code {
+  background-color: var(--color-bg-soft); /*Color de fondo del bloque de código de la carta de cheatsheets*/
+  padding: var(--space-md); /*Espacio entre el contenido y los bordes del bloque de código de la carta de cheatsheets*/
+  border-radius: var(--radius-sm); /*Redondear las esquinas del bloque de código de la carta de cheatsheets*/
+  border-left: 4px solid var(--color-accent-blue); /*Borde de color solo en la izquierda del bloque de código de la carta de cheatsheets*/
+  font-family: var(--font-family-code); /*Tipografía para el bloque de código de la carta de cheatsheets*/
+  font-size: 14px; /*Tamaño del texto del bloque de código de la carta de cheatsheets*/
+  color: var(--color-text-primary); /*Color del texto del bloque de código de la carta de cheatsheets*/
+  overflow-x: auto; /*Para que aparezca una barra de desplazamiento horizontal si el código es demasiado largo para el ancho del bloque*/
+  margin-bottom: var(--space-md); /*Espacio con el siguiente elemento de la carta de cheatsheets*/
+}
+
+.cheatsheets-code pre {
+  margin: 0; /*Para eliminar el margen predeterminado del elemento pre*/
+  font-family: 'Courier New', Courier, monospace; /*Tipografía para el código dentro del bloque de código de la carta de cheatsheets*/
+  font-size: 14px; /*Tamaño del texto para el código dentro del bloque de código de la carta de cheatsheets*/
+  color: var(--color-text-primary); /*Color del texto para el código dentro del bloque de código de la carta de cheatsheets*/ 
+  line-height: 1.6; /*Espacio entre líneas para mejorar la legibilidad del código dentro del bloque de código de la carta de cheatsheets*/
+}
+
+.cheatsheets-notas {
+  font-size: 14px; /*Tamaño de las notas de la carta de cheatsheets*/
+  color: var(--color-text-secondary); /*Color de las notas de la carta de cheatsheets*/
+  line-height: 1.6; /*Espacio entre líneas para mejorar la legibilidad de las notas de la carta de cheatsheets*/
+  margin: var(--space-md); /*Espacio con el bloque de código de la carta de cheatsheets y con el siguiente elemento de la carta de cheatsheets*/
+}
+
+.cheatsheets-list li {
+  position: relative; /*Esto es el "ancla" para la línea*/
+  padding-left: var(--space-lg); /*Espacio entre el borde izquierdo de la lista y el texto de la lista*/
+  margin-bottom: var(--space-xs); /*Espacio entre los elementos de la lista*/
+}
+
+.cheatsheets-list li::before {
+  content: '📖'; /*Para crear un elemento antes del contenido de la lista*/
+  position: absolute; /*Para posicionar la línea de forma absoluta respecto al elemento de la lista*/
+  left: 0; /*Para que la línea empiece desde el borde izquierdo de la lista*/
+}
+
+
+
+
+/*ABOUT / PRESENTACION SOBRE MI Y CV*/
 .contenedor-about{
-  display: flex; /*pone un elemento junto al otro*/
-  flex-direction: column; /*pone un elemento sobre otro*/
-  align-items: center; /*alinea los elementos en el centro*/
-  margin: 70px auto; /*margen superior*/
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  align-items: center; /*Alinea los elementos en el centro*/
+  margin: 70px auto; /*Margen superior*/
 }
 
 .aboutseccion h1{
-  font-size: 60px; /*tamaño del tituo*/
-  font-weight: var(--font-weight-bold); /*para resaltarlo como negrita*/
-  color: var(--color-text-primary); /*color del texto*/
-  margin-bottom: var(--space-sm); /*separa un elemento de el de abajo suyo*/
-  padding-bottom: var(--space-xs); /*distancia parte inferior*/
-  border-bottom: 4px solid var(--color-accent-blue); /*para la linea que lo subraya*/
-  width: fit-content; /*la linea mide lo mismo que el texto de arriba*/
-  text-align: left; /*alinea el texto a la izquierda*/
+  margin-bottom: var(--space-sm); /*Separa un elemento de el de abajo suyo*/
+  padding-bottom: var(--space-xs); /*Distancia parte inferior*/
+  border-bottom: 4px solid var(--color-accent-blue); /*Para la linea que lo subraya*/
+  width: fit-content; /*La linea mide lo mismo que el texto de arriba*/
+  text-align: left; /*Alinea el texto a la izquierda*/
 }
 
 .about-intro {
-  color: var(--color-text-secondary); /*color del texto*/
-  margin-bottom: var(--space-xl); /*espacio posterior*/
-  text-align: left; /*alinea el texto a la izquierda*/
-  font-size: 27px; /*tamaño*/
-  font-weight: var(--font-weight-regular); /*grosor de la letra*/
+  color: var(--color-text-secondary); /*Color del texto*/
+  margin-bottom: var(--space-xl); /*Espacio posterior*/
+  text-align: left; /*Alinea el texto a la izquierda*/
+  font-size: 20px; /*Tamaño*/
+  font-weight: var(--font-weight-regular); /*Grosor de la letra*/
 }
 
 .aboutbiografia {
-  display: flex; /*pone un elemento junto al otro*/
-  gap: var(--space-xl); /*espacio entre elementos*/
-  margin-bottom: var(--space-xl); /*espacio posterior*/
-  width: 100%; /*ocupa en ancho maximo*/
+  display: flex; /*Pone un elemento junto al otro*/
+  gap: var(--space-xl); /*Espacio entre elementos*/
+  margin-bottom: var(--space-xl); /*Espacio posterior*/
+  width: 100%; /*Ocupa en ancho maximo*/
 }
 
 .aboutfoto {
   flex: 0 0 350px;
-  background-color: var(--color-bg-main); /*color de fondo*/
-  padding: var(--space-md); /*espacio con la caja*/
-  padding-bottom: var(--space-xl); /*espacio posterior*/
-  box-shadow: var(--shadow-soft); /*sombreado de la caja*/
-  border-radius: var(--radius-sm); /*redondeo de esquinas*/
-  transform: rotate(-2deg); /*rota la caja de la polaroid*/
+  background-color: var(--color-bg-main); /*Color de fondo*/
+  padding: var(--space-md); /*Espacio con la caja*/
+  padding-bottom: var(--space-xl); /*Espacio posterior*/
+  box-shadow: var(--shadow-soft); /*Sombreado de la caja*/
+  border-radius: var(--radius-sm); /*Redondeo de esquinas*/
+  transform: rotate(-2deg); /*Rota la caja de la polaroid*/
 }
 
 .aboutfoto img {
-  object-fit: cover;  /* La imagen no se deforma */
-  display: block; /*convierte el elemento en un bloque*/
-  width: 100%; /*ocupa todo el ancho disponible*/
-  aspect-ratio: 1 / 1; /*para hacerla cuadrada*/
-  padding-bottom: var(--space-lg); /*espacio con el objeto de abajo*/
+  object-fit: cover;  /*La imagen no se deforma*/
+  display: block; /*Convierte el elemento en un bloque*/
+  width: 100%; /*Ocupa todo el ancho disponible*/
+  aspect-ratio: 1 / 1; /*Para hacerla cuadrada*/
+  padding-bottom: var(--space-lg); /*Espacio con el objeto de abajo*/
 }
 
 .polaroidfoto {
-  margin: 0; /*distancia con el margen*/
-  margin-top: var(--space-sm); /*margen inferior*/
-  text-align: center; /*alinea el texto al centro*/
-  font-size: 60px; /*tamaño del texto*/
-  font-weight: var(--font-weight-black); /*efecto negrita*/
-  background: linear-gradient(135deg, #ffec3d 0%, #ffae06 50%, #e67e22 100%); /*color de fondo degradado*/
-  -webkit-text-fill-color: transparent; /*pone el texto en transparente para que se vea el degradado */
-  -webkit-background-clip: text; /*para pintar solo el texto*/
-  background-clip: text; /*esto sería la tijera*/
-  letter-spacing: 8px; /*espacio entre las letras*/
-  text-transform: uppercase; /*pone todo el texto en mayusculas*/
-  border-top: 4px solid var(--color-accent-yellow); /*liea superior*/
-  border-bottom: 4px solid var(--color-accent-yellow); /*linea inferior*/
+  margin: 0; /*Distancia con el margen*/
+  margin-top: var(--space-sm); /*Margen inferior*/
+  text-align: center; /*Alinea el texto al centro*/
+  font-size: 60px; /*Tamaño del texto*/
+  font-weight: var(--font-weight-black); /*Efecto negrita*/
+  background: linear-gradient(135deg, #ffec3d 0%, #ffae06 50%, #e67e22 100%); /*Color de fondo degradado*/
+  -webkit-text-fill-color: transparent; /*Pone el texto en transparente para que se vea el degradado*/
+  -webkit-background-clip: text; /*Para pintar solo el texto*/
+  background-clip: text; /*Esto sería la tijera*/
+  letter-spacing: 8px; /*Espacio entre las letras*/
+  text-transform: uppercase; /*Pone todo el texto en mayusculas*/
+  border-top: 4px solid var(--color-accent-yellow); /*Linea superior*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Linea inferior*/
 }
 
 .aboutpresentacion {
-  display: flex; /*pone un objeto junto al otro*/
-  flex-direction: column; /*pone un objeto sobre el otro*/
-  flex: 1; /*ocupa todo el espacio del contenedor*/
-  gap: var(--space-md); /*espacio entre elementos*/
-  text-align: justify; /*alinea el texo justificado*/
+  display: flex; /*Pone un objeto junto al otro*/
+  flex-direction: column; /*Pone un objeto sobre el otro*/
+  flex: 1; /*Ocupa todo el espacio del contenedor*/
+  gap: var(--space-md); /*Espacio entre elementos*/
+  text-align: justify; /*Alinea el texto justificado*/
 }
 
 .aboutpresentacion h2 {
-  font-size: 50px; /*tamaño*/
-  font-weight: var(--font-weight-black); /*grosor*/
-  color: var(--color-text-primary); /*color*/
-  margin: 0; /*distancia con el margen*/
+  color: var(--color-text-primary); /*Color*/
+  margin: 0; /*Distancia con el margen*/
 }
 
 .aboutpresentacion h3 {
-  font-size: 30px; /*tamaño*/
-  font-weight: var(--font-weight-regular); /*grosor*/
-  color: var(--color-accent-blue); /*color*/
-  margin: 0; /*distancia con el margen*/
+  color: var(--color-accent-blue); /*Color*/
+  margin: 0; /*Distancia con el margen*/
 }
 
 .aboutpresentacion p{
-  font-size: 16px; /*tamaño*/
-  color: var(--color-text-secondary); /*color*/
-  line-height: 1.7; /*espacio entre lineas*/
+  font-size: 16px; /*Tamaño*/
+  color: var(--color-text-secondary); /*Color*/
+  line-height: 1.7; /*Espacio entre lineas*/
 }
 
 .aboutbotones {
-  display: flex; /*pone un elemento junto al otro*/
-  gap: var(--space-md); /*espacio etre los elementos*/
-  margin-top: var(--space-sm); /*espacio posterior*/
+  display: flex; /*Pone un elemento junto al otro*/
+  gap: var(--space-md); /*Espacio entre los elementos*/
+  margin-top: var(--space-sm); /*Espacio posterior*/
 }
 .aboutbotones a {
-  display: inline-block;  /*Colocar elementos uno al lado del otro, con control de tamaño */
-  color: var(--color-accent-blue); /*color del texto*/
-  font-size: 14px; /*tamaño del texo*/
-  padding: 8px 18px; /*margenes*/
-  border: 1px solid var(--color-accent-blue); /* Un pequeño recuadro para el logo */
-  border-radius: 7px; /*borde del cuadro*/
-  background-color: transparent; /*fondo de color transparente*/
-  transition: all var(--transition-normal);  /* Velocidad para la animación */
+  display: inline-block; /*Colocar elementos uno al lado del otro, con control de tamaño*/
+  color: var(--color-accent-blue); /*Color del texto*/
+  font-size: 14px; /*Tamaño del texto*/
+  padding: 8px 18px; /*Margenes*/
+  border: 1px solid var(--color-accent-blue); /*Un pequeño recuadro para el logo*/
+  border-radius: 7px; /*Borde del cuadro*/
+  background-color: transparent; /*Fondo de color transparente*/
+  transition: all var(--transition-normal); /*Velocidad para la animación*/
 }
 
 .aboutbotones a:hover{
-  color: var(--color-bg-main); /*color del texto*/
-  transform: translateY(-4px); /*para que suba*/
+  color: var(--color-bg-main); /*Color del texto*/
+  transform: translateY(-4px); /*Para que suba*/
   background-color: var(--color-accent-blue); /*Cambia el color de fonde del boton a gris claro*/
-  transition: all var(--transition-normal);  /* Velocidad para la animación */
+  transition: all var(--transition-normal);  /*Velocidad para la animación*/
 }
 
 /*ESTUDIOS Y PRACTICAS*/
 .educacionseccion, .experienciaCV {
-  width: 100%; /*ocupa el maximo de ancho*/
-  max-width: 1200px; /*que sea el mismo para todos */
-  margin: 0 auto; /*distancia con el margen*/
-  display: flex; /*pone un elemento junto otro*/
-  flex-direction: column; /*pone un elemento sobre otro*/
+  width: 100%; /*Ocupa el maximo de ancho*/
+  max-width: 1200px; /*Que sea el mismo para todos*/
+  margin: 0 auto; /*Distancia con el margen*/
+  display: flex; /*Pone un elemento junto otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
 }
 
 .educacionlista, .practicaslista, .experiencialista{
- display: flex; /*pone un elemento junto al otro*/
- flex-direction: column; /*pone un elemento sobre otro*/
- gap: var(--space-lg); /*distancia entre los elemento*/
- padding: 0; /*distancia con el interior de la caja*/
- margin:  0; /*distancia con el margen*/
- width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+ display: flex; /*Pone un elemento junto al otro*/
+ flex-direction: column; /*Pone un elemento sobre otro*/
+ gap: var(--space-lg); /*Distancia entre los elemento*/
+ padding: 0; /*Distancia con el interior de la caja*/
+ margin:  0; /*Distancia con el margen*/
+ width: 100%; /*Asegura que la lista ocupe todo el ancho disponible*/
  align-items: stretch; /*estira todos los hijos*/
 }
 
-.educacionarticle h2, .practicasarticle h2, .experienciaCV h2, .valoresseccion h2 {
-  font-size: 40px; /*tamaño*/
-  font-weight: var(--font-weight-bold); /*grosor*/
-  color: var(--color-text-primary); /*color*/
-  margin-top: var(--space-xl); /*espacio desde el borde superior*/
-  margin-bottom: var(--space-lg); /*margen posterior*/
-  border-bottom: 4px solid var(--color-accent-yellow); /*linea*/
-  width: fit-content; /* la línea medirá lo que mida el texto */
+.educacionarticle h3, .practicasarticle h3, .experienciaCV h3, .valoresseccion h3 {
+  color: var(--color-text-primary); /*Color*/
+  margin-top: var(--space-xl); /*Espacio desde el borde superior*/
+  margin-bottom: var(--space-lg); /*Margen posterior*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Linea*/
+  width: fit-content; /*La línea medirá lo que mida el texto */
 }
 
 .educaciongrado, .practicasgrado, .experienciatrabajo{
-  display: flex; /*pone un elemento junto al otro*/
-  flex-direction: column; /*pone un elemento sobre otro*/
-  align-self: stretch; /*obliga a la caja individual a llenar el ancho del padre*/
-  width: 100%; /*ocupa todo el espacio */
-  background-color: var(--color-bg-main); /*color del fondo*/
-  border-radius: var(--radius-md); /*redondear las esquinas*/
-  box-shadow: var(--shadow-soft); /*sombra de la caja*/
-  border-left: 4px solid var(--color-accent-blue); /*borde de color solo en la izquierda*/
-  padding: var(--space-lg); /*espacio de los elementos con la caja*/
-  box-sizing: border-box; /* Muy importante para que el padding no rompa el ancho */
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  align-self: stretch; /*Obliga a la caja individual a llenar el ancho del padre*/
+  width: 100%; /*Ocupa todo el espacio*/
+  background-color: var(--color-bg-main); /*Color del fondo*/
+  border-radius: var(--radius-md); /*Redondear las esquinas*/
+  box-shadow: var(--shadow-soft); /*Sombra de la caja*/
+  border-left: 4px solid var(--color-accent-blue); /*Borde de color solo en la izquierda*/
+  padding: var(--space-lg); /*Espacio de los elementos con la caja*/
+  box-sizing: border-box; /*Muy importante para que el padding no rompa el ancho*/
 }
 
 .educacionlista span, .practicaslista span, .experiencialista span{
-  color: var(--color-accent-blue); /*color del texto*/
+  font-size: 16px; /*Tamaño del texto*/
+  color: var(--color-accent-blue); /*Color del texto*/
 }
 
-.educacionlista h4, .practicaslista h4, .experiencialista h4{
-  font-size: 20px; /*tamaño*/
-  font-weight: var(--font-weight-bold); /*grosor*/
-  color: var(--color-text-primary); /*color*/
-  margin-bottom: var(--space-xs); /*margen inferior*/
+.educacionlista h5, .practicaslista h5, .experiencialista h5{
+  color: var(--color-text-primary); /*Color*/
+  margin-bottom: var(--space-xs); /*Margen inferior*/
 }
 
 .educacionfecha, .practicasfecha, .experienciafecha {
-  font-size: 14px; /*tamaño*/
-  color: var(--color-text-secondary); /*color*/
-  font-weight: var(--font-weight-medium); /*grosor*/
-  margin-bottom: var(--space-sm); /*margen inferior*/
+  font-size: 14px; /*Tamaño*/
+  color: var(--color-text-secondary); /*Color*/
+  font-weight: var(--font-weight-medium); /*Grosor*/
+  margin-bottom: var(--space-sm); /*Margen inferior*/
 }
 
 .educaciongrado ul li, .practicasgrado ul li, .experienciatrabajo ul li{
-  color: var(--color-text-secondary); /*color*/
-  margin: var(--space-xs) 0; /*margen*/
-  line-height: 1.6; /*espacio entre lineas*/
-  list-style: disc; /*decoracion de la lista*/
+  color: var(--color-text-secondary); /*Color*/
+  margin: var(--space-xs) 0; /*Margen*/
+  line-height: 1.6; /*Espacio entre lineas*/
+  list-style: disc; /*Decoracion de la lista*/
 }
 
 /*VALORES*/
 .listavalores {
-  display: flex; /*pone un elemento junto al otro*/
-  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  gap: var(--space-lg); /*distancia entre los elementos*/
-  padding: 0; /*distancia con el interior de la caja*/
-  margin: 0; /*distancia con el margen*/
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-wrap: wrap; /*Permite que los objetos bajen si no caben en el móvil*/
+  gap: var(--space-lg); /*Distancia entre los elementos*/
+  padding: 0; /*Distancia con el interior de la caja*/
+  margin: 0; /*Distancia con el margen*/
 }
 
 .valorcaja {
-  display: flex; /*pone un elemento junto al otro*/
-  flex-direction: column;
-  flex: 1 1 calc(50% - var(--space-lg)); /*para que cada caja ocupe la mitad del espacio disponible, restando el gap entre ellas*/ 
-  padding: var(--space-md); /*espacio entre los elementos y la caja*/
-  background-color: var(--color-bg-main); /*color del fondo*/
-  border-radius: var(--radius-md); /*redondear las esquinas*/
-  box-shadow: var(--shadow-soft); /*sombra de la caja*/
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre el otro*/
+  flex: 1 1 calc(50% - var(--space-lg)); /*Para que cada caja ocupe la mitad del espacio disponible, restando el gap entre ellas*/ 
+  padding: var(--space-md); /*Espacio entre los elementos y la caja*/
+  background-color: var(--color-bg-main); /*Color del fondo*/
+  border-radius: var(--radius-md); /*Redondear las esquinas*/
+  box-shadow: var(--shadow-soft); /*Sombra de la caja*/
 }
 
 .valorcaja h4 {
-  font-size: 20px; /*tamaño*/
-  font-weight: var(--font-weight-bold); /*grosor*/
   color: var(--color-accent-blue); /*color*/
   margin-bottom: var(--space-sm); /*margen inferior*/
 }
 
 .valorcaja p {
-  font-size: 14px; /*tamaño*/
-  text-align: justify; /*justifica el texto*/
-  color: var(--color-text-secondary); /*color*/
-  line-height: 1.6; /*espacio entre lineas*/
+  font-size: 14px; /*Tamaño*/
+  text-align: justify; /*Justifica el texto*/
+  color: var(--color-text-secondary); /*Color*/
+  line-height: 1.6; /*Espacio entre lineas*/
 }
 
 
-/*SECCIÓN DE TARJETAS CHEATSHEETS*/
-.cheatsheets-intro {
-  font-size: 18px; /*tamaño*/
-  color: var(--color-text-secondary); /*color*/
-  margin-top: var(--space-sm); /*espacio con la parte de arriba*/
-  line-height: 1.6; /*espacio entre lineas*/
+
+
+/*RECURSOS*/
+
+
+
+
+/*FORMULARIO DE CONTACTO*/
+.formulario-contacto {
+  display: flex; /*Coloca los elementos uno al lado de otro*/
+  flex-direction: column; /*Para colocar un elemento sobre otro*/
+  align-items: center; /*Centra los hijos horizontalmente*/
+  justify-content: center; /*Centra los hijos verticalmente*/
+  margin: 70px auto; /*Para que el header no lo tape*/
+  padding: var(--space-xl); /*Separación entre elementos*/
+  background-color: var(--color-bg-main); /*Color de fondo de la caja*/
+  border-radius: var(--space-md); /*Redondeo de las esquinas de la caja*/
+  box-shadow: var(--shadow-soft); /*Sombra de la caja*/
+  max-width: 900px; /*Una caja donde contacto se ve mejor*/
+  width: 90%;  /*Para que en móviles no toque los bordes del teléfono*/
+  font-family: var(--font-family-main); /*Tipografia*/
 }
 
-#cheatsheets-container {
-  display: flex; /*pone los elementos uno junto al otro*/
-  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  gap: var(--space-md); /*espacio entre los objetos*/
-  align-items: start; /*alinea los objetos verticalmente al inicio*/
-  margin-top: var(--space-md); /*espacio con la parte de arriba*/
+.container-datos {
+  padding: var(--space-md); /*Separación entre elementos*/
+  width: 90%; /*Para que en móviles no toque los bordes del teléfono*/
+  box-sizing: border-box; /*Para que el padding no ensanche la caja*/
+  }
+
+.formulario-contacto h1{
+  margin-bottom: var(--space-xl); /*Distancia con el objeto de abajo*/
+  width: fit-content; /*La linea mide lo que mide el texto*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Color de la linea*/
 }
 
-.cheatsheets-card {
-  flex: 1 1 calc(25% - var(--space-md)); /*para que cada tarjeta ocupe un cuarto del espacio disponible, restando el gap entre ellas*/
-  background-color: var(--color-bg-main); /*color de fondo de la tarjeta*/
-  border-radius: var(--radius-md); /*redondeo de las esquinas de la tarjeta*/
-  padding: var(--space-md); /*espacio entre el contenido y los bordes de la tarjeta*/
-  box-shadow: var(--shadow-soft); /*sombra de la tarjeta para darle profundidad*/
-  display: flex; /*pone los elementos uno junto al otro*/
-  flex-direction: column; /*pone un elemento sobre otro*/
-  align-items: center; /*alinea los elementos en el centro*/
-  text-align: center; /*alinea el texto al centro*/
-  text-decoration: none; /*para quitar subrayados o decoración ya establecida*/
-  color: var(--color-text-primary); /*color del texto*/
-  transition: all var(--transition-normal); /*tiempo del efecto*/
-  margin-top: var(--space-md); /*espacio con la parte de arriba*/
+.formulario-contacto p {
+  font-size: 20px; /*Tamaño*/
+  text-align: center; /*Alinea el texto al centro*/
+  color: var(--color-text-primary); /*Color del texto*/
 }
 
-.cheatsheets-card:hover {
-  transform: translateY(-4px); /*para que suba*/
-  box-shadow: var(--shadow-soft); /*sombra de la tarjeta para darle profundidad*/
+label {
+  display: block; /*Para ocupar todo el ancho posible*/
+  margin-bottom: 8px; /*Margen inferior entre elementos*/
+  font-family: var(--font-family-main); /*Tipografía*/
+  color: var(--color-text-primary); /*Color del texto*/
+  font-size: 16px; /*Tamaño del texto*/
+  font-weight:var(--font-weight-bold); /*Para que este en negrita*/
 }
 
-.cheatsheets-icon-wrapper {
-  width: 60px; /*tamaño del contenedor del icono*/
-  height: 60px; /*tamaño del contenedor del icono*/
-  display: flex; /*pone los elementos uno junto al otro*/
-  align-items: center; /*alinea los elementos verticalmente en el centro*/
-  justify-content: center; /*alinea los elementos horizontalmente en el centro*/
-  margin-bottom: var(--space-md); /*espacio entre el contenedor del icono y el título de la tarjeta*/
+input, textarea {
+width: 100%; /*Ancho*/
+padding: var(--space-md); /*Distancia entre elementos*/
+margin-bottom: 20px; /*Distancia con la parte de abajo*/
+border: 1px solid var(--color-text-primary); /*Color del borde de caja*/
+border-radius: var(--radius-md); /*Redondear las esquinas*/
+font-family: var(--font-family-main); /*Tipografía*/
+box-sizing: border-box; /*Evita que input y textarea se salgan de la caja*/
+transition: var(--transition-normal); /*Efecto para cuando escribe el usuario escribir*/
 }
 
-.cheatsheets-card .cheatsheets-icon {
-  width: 100%; /*hace que el icono ocupe todo el espacio del contenedor*/
-  height: 100%; /*hace que el icono ocupe todo el espacio del contenedor*/
-  object-fit: contain; /*para que el icono se ajuste al contenedor sin deformarse*/
+/*EFECTO PARA CUANDO EL USUARIO VA A ESCRIBIR*/
+input:focus, textarea:focus {
+  outline: none; /*Para quitar efectos prestablecidos de navegadores*/
+  border-color: var(--color-text-primary); /*Color del borde de baja*/
+  box-shadow: var(--shadow-soft); /*Color de la sobra*/
+}
+textarea {
+  resize: vertical; /*Permite estirar hacia abajo pero no hacia los lados*/
 }
 
-.cheatsheets-card h4 {
-  font-size: 18px; /*tamaño del título de la tarjeta*/
-  font-weight: var(--font-weight-bold); /*grosor del título de la tarjeta*/
-  color: var(--color-text-primary); /*color del título de la tarjeta*/
-  margin-bottom: var(--space-xs); /*margen entre el título de la tarjeta y la descripción*/
+.botones-form {
+  display: flex; /*Ponemos los botones uno al lado del otro*/
+  gap: var(--space-xl); /*Espacio entre botones*/
+  margin-top: var(--space-md); /*Separación con el campo anterior*/
 }
 
-.cheatsheets-card p {
-  font-size: 14px; /*tamaño de la descripción de la tarjeta*/
-  color: var(--color-text-secondary); /*color de la descripción de la tarjeta*/
+.boton-submit, .boton-reset {
+  flex: 1; /*Hace que los dos botones midan lo mismo*/
+  cursor: pointer; /*Convierte el cursor en una mano*/
+  border: 2px solid; /*Borde de la caja*/
+  font-weight: var(--font-weight-bold); /*Para resaltar el texto tipo negrita*/
+  padding: var(--space-md); /*Espacio del texto con la caja*/
+  border-radius: var(--radius-sm); /*Para redondear las esquinas*/
+  background-color: transparent; /*Fondo transparente*/
+  transition: var(--transition-normal); /*Tiempo del efecto*/
 }
 
-.cheatsheets-nav {
-  position: sticky; /*para que el menú se quede fijo en la parte superior al hacer scroll*/
-  top: 66px; /*para que el menú no se superponga con el header al hacer scroll*/
-  max-width: 1000px;/* No crecerá más de 1000px en pantallas grandes */
-  background-color: var(--color-bg-main); /*color de fondo del menú*/
-  display: flex; /*pone los elementos uno junto al otro*/
-  flex-wrap: wrap; /*permite que los objetos bajen si no caben en el móvil*/
-  justify-content: center; /*alinea los elementos horizontalmente en el centro*/
-  align-items: center; /*alinea los elementos verticalmente en el centro*/
-  gap: var(--space-md); /*espacio entre los elementos del menú*/
-  padding: var(--space-sm) var(--space-md); /*espacio con la parte de arriba y abajo del menú*/
-  z-index: 100; /*para que el menú se superponga a otros elementos al hacer scroll*/
-  border-radius: 0 0 var(--radius-md) var(--radius-md); /*redondear las esquinas del menú 0 para las de arriba, var(--radius-md) para las de abajo */
-  border-bottom: 2px solid var(--color-bg-soft); /*línea inferior para separar el menú del contenido al hacer scroll*/
-  box-shadow: var(--shadow-soft); /*sombra para darle profundidad al menú al hacer scroll*/
-  margin-left: auto !important; /*para que el menú se alinee a la derecha en pantallas grandes, con !important para asegurar que se aplique esta regla incluso si hay otras reglas que intentan alinear el menú de otra manera*/
-  margin-right: auto !important; /*para que el menú se alinee a la derecha en pantallas grandes, con !important para asegurar que se aplique esta regla incluso si hay otras reglas que intentan alinear el menú de otra manera*/
+.boton-submit, .boton-reset {
+  color: var(--color-text-primary); /*Color del texto*/
+  border-color: transparent; /*Borde transparente para que no se vea*/
 }
 
-.cheatsheets-nav a {
-  color: var(--color-text-primary); /*color del texto del menú*/
-  font-size: 14px; /*tamaño del texto del menú*/
-  text-decoration: none; /*para quitar subrayados o decoración ya establecida*/
-  padding: var(--space-sm) var(--space-md); /*espacio con la parte de arriba y abajo, y con los lados del menú*/
-  border-radius: var(--radius-sm); /*redondear las esquinas del menú*/
-  position: relative; /* Esto es el "ancla" para la línea */
-  display: inline-block; /* Asegura que el padding y la posición funcionen bien */
-  transition: all var(--transition-normal); /*tiempo del efecto*/
+.boton-submit:hover, .boton-reset:hover {
+  color: var(--color-bg-main); /*Color del texto*/
+  transform: translateY(-4px); /*Para que suba*/
+  transition: var(--transition-slow); /*Tiempo del efecto*/
+  background-color: var(--color-text-primary); /*Cambia a tu color oscuro al pasar el ratón*/
 }
 
-.cheatsheets-nav a:hover {
-  color: var(--color-accent-yellow);
-}
+
+
+
+
 
 
 
@@ -873,135 +932,316 @@ textarea {
 
 
 /* ============================================================
-   DISEÑO RESPONSIVE
-   ============================================================ */
+                      DISEÑO RESPONSIVE
+============================================================ */
+
 
 @media (max-width: 768px) {
+/*MENU HAMBURGUESA*/
+.hamburguesa {
+  display: flex; /*Muestra el botón de hamburguesa en pantallas pequeñas*/
+  order: 2; /*Para moverlo a la derecha si es necesario*/
+}
+
+.theme-btn {
+  order: 1; /*Para moverlo a la izquierda de la hamburguesa*/
+  margin-right: 15px; /*Espacio entre el botón de modo oscuro y la hamburguesa*/
+}
+
+.menuNavegacion ul {
+  position: fixed; /*Para que el menú se superponga al contenido*/
+  top: 0; /*Alineado al borde superior*/
+  right: -100%; /*Escondido a la derecha*/
+  width: 70%;   /*Ocupa el 70% del ancho*/
+  height: 100%; /*Ocupa toda la altura de la pantalla*/
+  background-color: var(--color-bg-soft);  /*Color de fondo del menú desplegable*/
+  flex-direction: column; /*Enlaces uno debajo de otro*/
+  align-items: center; /*Centra los enlaces horizontalmente*/
+  justify-content: center; /*Centra los enlaces verticalmente*/
+  transition: right 0.4s ease-in-out; /*Animación para deslizar el menú*/
+  box-shadow: -5px 0 15px rgba(0,0,0,0.3); /*Sombra para dar profundidad al menú desplegable*/
+  z-index: 999; /*Para que el menú quede debajo del botón de hamburguesa pero encima del resto del contenido*/
+}
+
+/*MENU CON CLASE "OPEN": se desliza hacia adentro*/
+.menuNavegacion ul.open {
+  right: 0; /*Se muestra el menú al moverlo a la posición visible*/
+}
+
+.menuNavegacion li {
+  margin: 10px; /*Espacio vertical entre los enlaces en el menú desplegable*/
+}
+
+.menuNavegacion li a {
+  font-size: 24px; /*Texto más grande para dedos*/
+}
+
+
+/*FOOTER PIE DE PAGINA*/
+footer, .pie-de-pagina {
+  padding: var(--space-md) 20px; /*Reducimos el padding lateral*/
+  gap: var(--space-sm); /*Menos espacio entre bloques*/
+}
+
+.botones-pie {
+  gap: 10px; /*Botones más juntos para que quepan mejor*/
+}
+
+.pie-de-pagina a {
+  font-size: 14px; /* Texto un poco más pequeño en móvil*/
+  padding: 6px 12px; /* Botones menos voluminosos*/
+}
+
+.pie-de-pagina p {
+  font-size: 14px; /*El copyright más pequeño para que no ocupe tanto*/
+  text-align: center; /*Asegura que el texto esté centrado si salta de línea*/
+  line-height: 1.5; /*Mejoramos la lectura si el texto se divide*/
+}
+
+
+/*AJUSTES INDEX HERO */
+.contenedor-hero {
+  margin-top: 60px; /*Reduce el margen superior para móviles*/
+  min-height: auto; /*La altura se ajusta al contenido en lugar de ocupar toda la pantalla*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  text-align: center; /*Alinea el texto en el centro*/
+  padding: var(--space-lg) 5%; /*Menos padding para aprovechar el ancho en móviles*/
+}
+
+.contenedor-hero img {
+  width: 250px; /*Reduce el tamaño de la imagen para móviles*/
+  height: 250px; /*Reduce el tamaño de la imagen para móviles*/
+}
+
+.contenedor-hero h1 { 
+  font-size: 32px !important; /*Reduce el tamaño de la fuente para móviles*/
+} 
   
-  /*AJUSTES GENERALES Y CABECERA */
-  .contenedor-cabecera {
-    margin-top: 60px; /*reduce el margen superior para móviles*/
-    min-height: auto; /*la altura se ajusta al contenido en lugar de ocupar toda la pantalla*/
-  }
-
-  .cabecera {
-    flex-direction: column; /*pone un elemento sobre otro*/
-    text-align: center; /*alinea el texto en el centro*/
-    padding: var(--space-lg) 5%; /*menos padding para aprovechar el ancho en móviles*/
-  }
-
-  .cabecera img {
-    width: 250px; /*reduce el tamaño de la imagen para móviles*/
-    height: 250px; /*reduce el tamaño de la imagen para móviles*/
-  }
-
-  .cabecera h1 { 
-    font-size: 35px !important; /*reduce el tamaño de la fuente para móviles*/
-  } 
+.contenedor-hero h2 { 
+  font-size: 26px !important; /*Reduce el tamaño de la fuente para móviles*/
+} 
   
-  .cabecera h2 { 
-    font-size: 28px !important; /*reduce el tamaño de la fuente para móviles*/
-  } 
-  
-  .cabecerabotones { 
-    justify-content: center; /*centra los botones horizontalmente en móviles*/
-  } 
+.botones-hero { 
+  justify-content: center; /*Centra los botones horizontalmente en móviles*/
+} 
 
-  /*NAVEGACIÓN MÓVIL (HAMBURGUESA) */
-  .hamburguesa { 
-    display: flex;   /*muestra el botón de hamburguesa en móviles*/
 
-  }
+/*TARJETAS (SKILLS / PROYECTOS / CHEATSHEETS) */
+/*SKILLS*/
+#skills-container {
+  padding: var(--space-md) 0; /*Reduce el padding superior e inferior para móviles*/
+  justify-content: center; /*centra las tarjetas horizontalmente en móviles*/
+}
 
-  .menuNavegacion ul {
-    position: fixed; /*para que el menú se superponga al contenido*/
-    top: 0; /*para que el menú empiece desde la parte superior de la pantalla*/
-    right: -100%; /*oculta el menú fuera de la pantalla a la derecha*/
-    width: 75%; /*ancho del menú en móviles*/
-    height: 100vh; /*altura completa de la pantalla*/
-    background-color: var(--color-bg-soft);  /*color de fondo del menú*/
-    flex-direction: column; /*para colocar los elementos uno sobre otro*/
-    justify-content: center; /*centra los elementos verticalmente*/
-    transition: 0.4s; /*transición suave para la apertura del menú*/
-    box-shadow: -5px 0 15px rgba(0,0,0,0.3); /*sombra para dar profundidad al menú*/
-  }
-  .menuNavegacion ul.open { 
-    right: 0; /*muestra el menú al agregar la clase "open"*/
-  }
+#skills h3 {
+  font-size: 22px; /*Tamaño del título de cada sección para móviles*/
+  border-bottom-width: 3px; /*Línea un poco más fina*/
+}
 
-  /*SECCIÓN SOBRE MÍ (ABOUT) */
-  .aboutseccion h1 { 
-    font-size: 35px; /*tamaño del título para móviles*/
-    text-align: center; /*alinea el título al centro para móviles*/
-    margin: 0 auto; /*centra el título horizontalmente y elimina el margen para móviles*/
-  } 
+.skill-card {
+  width: 100%; /*Hace que las tarjetas ocupen todo el ancho disponible en móviles*/
+  height: auto; /*Permite que el texto respire*/
+  padding: var(--space-sm); /*Un poco menos de padding interno*/
+}
 
-  .about-intro { 
-    font-size: 18px; /*tamaño del texto para móviles*/
-    text-align: center; /*alinea el texto al centro para móviles*/
-  }
+.skill-icon {
+  width: 50px; /*Reduce el tamaño del icono para móviles*/
+  height: 50px; /*Reduce el tamaño del icono para móviles*/
+  margin: 0 auto var(--space-sm) auto; /* Centramos el icono */
+}
 
-  .aboutbiografia { 
-    flex-direction: column; /*pone un elemento sobre otro en móviles*/
-    align-items: center; /*centra los elementos horizontalmente en móviles*/
-  } 
+.skill-card h4 {
+  font-size: 18px; /*Tamaño del título de cada skill para móviles*/
+  text-align: center; /*Alinea el título al centro para móviles*/
+}
 
-  .aboutfoto { 
-    flex: 0 0 auto; /*la caja se ajusta al contenido*/
-    width: 280px; /*ancho fijo para la imagen en móviles*/
-    transform: rotate(0deg); /*quita la rotación en móviles para que se vea mejor*/
-    margin-bottom: var(--space-md); /*reduce el margen inferior para que no haya tanto espacio en móviles*/
-  }
+.skill-nivel {
+  font-size: 14px; /*Tamaño del nivel de cada skill para móviles*/
+  text-align: center; /*Alinea el nivel al centro para móviles*/
+  display: block; /*Hace que ocupe todo el ancho de la tarjeta*/
+  width: 100%;    /*Asegura que use todo el espacio disponible*/
+}
 
-  .aboutpresentacion { 
-    width: 100%; /*ocupa todo el ancho disponible en móviles*/
-    text-align: justify; /*justifica el texto para una mejor lectura en móviles*/
-  }
+.skill-descripcion {
+  text-align: center; /*Alinea la descripción al centro para móviles*/
+}
 
-  .aboutpresentacion h2 { 
-    font-size: 32px; /*tamaño del título para móviles*/
-    text-align: center; /*alinea el título al centro para móviles*/
-  }
+.skill-tags {
+  justify-content: center; /*Centra las etiquetas horizontalmente en móviles*/
+}
 
-  .aboutbotones { 
-    justify-content: center; /*centra los botones horizontalmente en móviles*/
-    flex-wrap: wrap; /*permite que los botones bajen si no caben en el móvil*/
-  }
 
-  /* 4. CV: EDUCACIÓN, PRÁCTICAS Y VALORES */
-  .educacionarticle h2, .practicasarticle h2, .experienciaCV h2, .valoresseccion h2 {
-    font-size: 30px; /*tamaño del título para móviles*/
-    text-align: center; /*alinea el título al centro para móviles*/
-    margin: var(--space-lg) auto; /*centra el título y agrega espacio superior e inferior*/
-  }
-  .valorcaja {
-    flex: 1 1 100%; /* Las cajas de valores ahora ocupan todo el ancho en móvil */
-  }
+/*PROYECTOS*/
 
-  /*TARJETAS (SKILLS / PROYECTOS / CHEATSHEETS) */
-  #skills-container, #proyectos-container, #cheatsheets-container {
-    justify-content: center; /*centra las tarjetas horizontalmente en móviles*/
-  }
 
-  .skill-card, .cheatsheets-card {
-    width: 100%; /*hace que las tarjetas ocupen todo el ancho disponible en móviles*/
-    height: auto; /* Permite que el texto respire */
-  }
+/*SECCIÓN DE TARJETAS CHEATSHEETS*/  
+#cheatsheets h3 {
+  font-size: 22px; /*Tamaño del título de cada sección para móviles*/
+  border-bottom-width: 3px; /*Línea un poco más fina*/
+}
 
-  /*FORMULARIO DE CONTACTO */
-  .formulario-contacto {
-    padding: var(--space-lg); /*reduce el padding para móviles*/
-    width: 95%;/*reduce el ancho para móviles*/
-  }
+.cheatsheets-intro {
+  font-size: 16px; /*Tamaño del texto de introducción para móviles*/
+  text-align: center; /*Centramos el texto para mejor estética en móvil*/
+  padding: 0 10px; /*Un poco de padding lateral para que el texto no toque los bordes en móvil*/
+}
 
-  .formulario-contacto h1 { 
-    font-size: 35px; /*reduce el tamaño del título para móviles*/
-  }
+#cheatsheets-container {
+  justify-content: center; /*Centra las tarjetas si sobra espacio*/
+  gap: var(--space-sm); /*Reducimos un poco el hueco entre ellas*/
+}
 
-  .botones-form { 
-    flex-direction: column; /*pone un elemento sobre otro*/
-   }
-  .boton-submit, .boton-reset { 
-    width: 100%; /*hace que los botones ocupen todo el ancho disponible en móviles*/
-  }
+.cheatsheets-card {
+  min-width: 260px; /*Evita que se vuelvan demasiado flacas*/
+  padding: var(--space-sm); /*Reduce el padding interno para móviles*/
+  margin-top: var(--space-sm); /*Reduce el margen superior para que no haya tanto espacio en móviles*/
+}
+
+.cheatsheets-icon-wrapper {
+  width: 50px; /*Reduce el tamaño del icono para móviles*/
+  height: 50px; /*Reduce el tamaño del icono para móviles*/
+  margin-bottom: var(--space-sm); /*Reduce el margen inferior para que no haya tanto espacio en móviles*/
+}
+
+.cheatsheets-card h4 {
+  font-size: 18px; /*Tamaño del título de cada cheatsheet para móviles*/
+}
+
+.cheatsheets-card p {
+  font-size: 14px; /*Tamaño del texto de cada cheatsheet para móviles*/
+}
+
+/*CHEATSHEETS*/
+.cheatsheets-nav {
+  display: none !important; /*OCULTAR LA NAVEGACIÓN STICKY !important asegura que nada lo sobrescriba*/
+}
+
+.cheatsheets-nav a {
+  font-size: 14px; /*Tamaño del texto de los enlaces para móviles*/
+  padding: 6px 10px; /*Menos padding para que los enlaces sean más compactos en móviles*/
+}
+
+.cheatsheets-hero {
+  padding: var(--space-lg) var(--space-md); /*Reduce el padding lateral para móviles*/
+  text-align: center; /*Centra el texto en móviles*/
+  align-items: center; /*Centra verticalmente el contenido en móviles*/
+}
+
+.cheatsheet-hero h1 {
+  font-size: 32px; /*Título más pequeño para que no se corte*/
+  width: 100%; /*La línea amarilla ahora ocupa más espacio visual*/
+  text-align: center; /*Alinea el teto en el centro*/
+}
+
+.cheatsheet-hero p {
+  font-size: 16px; /*Tamaño de la letra*/
+  margin-bottom: var(--space-lg); /*Espacio de la parte inferior*/
+}
+
+.cheatsheets-badge {
+  margin-top: var(--space-md); /*Menos espacio superior*/
+}
+
+.cheatsheets-contenido {
+  padding: var(--space-md); /*Reduce el padding para móviles*/
+  gap: var(--space-md); /*Reduce el espacio entre los elementos de la sección de cheatsheets para móviles*/
+}
+
+.cheatsheets-carta {
+  padding: var(--space-sm); /*Reduce el padding interno de la carta de cheatsheets para móviles*/
+  margin-bottom: var(--space-md); /*Reduce el espacio con el siguiente elemento de la sección de cheatsheets para móviles*/
+  scroll-margin-top: 130px; /*Ajustado para que no lo tape el nav en móvil*/
+}
+
+.cheatsheets-carta h2 {
+  font-size: 26px; /*Subtítulos más proporcionados*/
+}
+
+.cheatsheets-code {
+  font-size: 12px; /*Código un poco más pequeño para evitar scroll excesivo*/
+  padding: var(--space-sm); /*Reduce el padding del bloque de código para móviles*/
+}
+
+.cheatsheets-notas {
+  margin: var(--space-sm) 0; /*Quita márgenes laterales excesivos*/
+}
+
+.cheatsheets-list li {
+  padding-left: var(--space-xl); /*Asegura espacio para el icono 📖*/
+  font-size: 14px; /*Tamaño de la letra*/
+}
+
+
+/*SECCIÓN SOBRE MÍ (ABOUT) */
+.aboutseccion h1 { 
+  font-size: 32px; /*Tamaño del título para móviles*/
+  text-align: center; /*Alinea el título al centro para móviles*/
+  margin: 0 auto; /*Centra el título horizontalmente y elimina el margen para móviles*/
+} 
+
+.about-intro {
+  margin-top: var(--space-md); /*Reduce el margen superior para móviles*/
+  font-size: 18px; /*Tamaño del texto para móviles*/
+  text-align: center; /*Alinea el texto al centro para móviles*/
+}
+
+.aboutbiografia { 
+  flex-direction: column; /*Pone un elemento sobre otro en móviles*/
+  align-items: center; /*Centra los elementos horizontalmente en móviles*/
+} 
+
+.aboutfoto { 
+  flex: 0 0 auto; /*La caja se ajusta al contenido*/
+  width: 280px; /*Ancho fijo para la imagen en móviles*/
+  transform: rotate(0deg); /*Quita la rotación en móviles para que se vea mejor*/
+  margin-bottom: var(--space-md); /*Reduce el margen inferior para que no haya tanto espacio en móviles*/
+}
+
+.aboutpresentacion { 
+  width: 100%; /*Ocupa todo el ancho disponible en móviles*/
+  text-align: justify; /*Justifica el texto para una mejor lectura en móviles*/
+}
+
+.aboutpresentacion h2 { 
+  font-size: 26px; /*Tamaño del título para móviles*/
+  text-align: center; /*Alinea el título al centro para móviles*/
+}
+
+.aboutbotones { 
+  justify-content: center; /*Centra los botones horizontalmente en móviles*/
+  flex-wrap: wrap; /*Permite que los botones bajen si no caben en el móvil*/
+}
+
+/*CV: EDUCACIÓN, PRÁCTICAS Y VALORES*/
+.educacionarticle h3, .practicasarticle h3, .experienciaCV h3, .valoresseccion h3 {
+  font-size: 22px; /*Tamaño del título para móviles*/
+  text-align: center; /*Alinea el título al centro para móviles*/
+  margin: var(--space-lg) auto; /*Centra el título y agrega espacio superior e inferior*/
+}
+
+.valorcaja {
+  flex: 1 1 100%; /*Las cajas de valores ahora ocupan todo el ancho en móvil*/
+}
+
+
+/*RECURSOS*/
+
+
+/*FORMULARIO DE CONTACTO*/
+.formulario-contacto {
+  padding: var(--space-lg); /*Reduce el padding para móviles*/
+  width: 95%;/*Reduce el ancho para móviles*/
+}
+
+.formulario-contacto h1 { 
+  font-size: 32px; /*Reduce el tamaño del título para móviles*/
+}
+
+.botones-form { 
+  flex-direction: column; /*Pone un elemento sobre otro*/
+}
+
+.boton-submit, .boton-reset { 
+  width: 100%; /*Hace que los botones ocupen todo el ancho disponible en móviles*/
+} 
 }

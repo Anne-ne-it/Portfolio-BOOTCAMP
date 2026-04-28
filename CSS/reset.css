@@ -1,61 +1,96 @@
 /* Reset CSS */
 *, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /*Elimina márgenes por defecto de todos los elementos y sus pseudo-elementos*/
+  padding: 0; /*Elimina relleno por defecto de todos los elementos y sus pseudo-elementos*/
+  box-sizing: border-box; /*Incluye el padding y el border dentro del ancho y alto total de los elementos*/
 }
 
 html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*Habilita el desplazamiento suave para anclas y navegación interna*/
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  margin-top: 100px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family-main); /*Fuente principal del proyecto*/
+  margin-top: 100px; /*Agrega un margen superior para evitar que el contenido quede oculto detrás del header fijo*/
+  line-height: 1.6; /*Mejora la legibilidad al aumentar el espacio entre líneas*/
+  -webkit-font-smoothing: antialiased; /*Mejora la apariencia de las fuentes en navegadores WebKit (como Chrome y Safari)*/
+  -moz-osx-font-smoothing: grayscale; /*Mejora la apariencia de las fuentes en navegadores Firefox en macOS*/
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-xl) var(--space-lg);
+  max-width: 1200px; /*Limita el ancho del contenido principal para mejorar la legibilidad en pantallas grandes*/
+  margin: 0 auto; /*Centra el contenido principal horizontalmente*/
+  padding: var(--space-xl) var(--space-lg); /*Agrega espacio interno alrededor del contenido principal*/
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  line-height: 1.2;
+  margin: 0; /*Elimina márgenes por defecto de los títulos para un control total sobre el espaciado*/
+  padding: 0; /*Elimina relleno por defecto de los títulos para un control total sobre el espaciado*/
+  font-family: var(--font-family-main); /*Variable de Roboto*/
+  line-height: 1.2; /*Un interlineado más compacto para títulos*/
+}
+
+h1 {
+  font-size: 48px; /*Tamaño del título principal para pantallas grandes*/
+  font-weight: var(--font-weight-black); /*900*/
+  color: var(--color-text-primary); /*Color del texto principal para el título*/
+}
+
+h2 {
+  font-size: 32px; /*Tamaño del título secundario para pantallas grandes*/
+  font-weight: var(--font-weight-bold); /*700*/
+  color: var(--color-text-primary); /*Color del texto principal para el título*/
+}
+
+h3 {
+  font-size: 24px; /*Tamaño del título terciario para pantallas grandes*/
+  font-weight: var(--font-weight-medium); /*500*/
+  color: var(--color-accent-blue); /*Color del texto de acento azul para el título*/
+}
+
+h4 {
+  font-size: 20px; /*Tamaño del título cuaternario para pantallas grandes*/
+  font-weight: var(--font-weight-medium); /*500*/
+}
+
+h5 {
+  font-size: 16px; /*Tamaño del título quinario para pantallas grandes*/
+  font-weight: var(--font-weight-regular); /*400*/
+}
+
+h6 {
+  font-size: 14px; /*Tamaño del título senario para pantallas grandes*/
+  font-weight: var(--font-weight-light); /*300*/
+  color: var(--color-text-secondary); /*Color del texto secundario para el título*/
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /*Elimina el subrayado por defecto de los enlaces para un estilo más limpio*/
+  color: inherit; /*Hace que los enlaces hereden el color del texto circundante para una apariencia más integrada*/
 }
 
 ul, ol {
-  list-style: none;
+  list-style: none; /*Elimina los estilos de lista por defecto (viñetas y números) para un control total sobre la apariencia de las listas*/
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  max-width: 100%; /*Hace que las imágenes sean responsivas, ajustándose al ancho de su contenedor sin excederlo*/
+  height: auto; /*Mantiene la proporción de las imágenes al ajustar su tamaño*/
+  display: block; /*Elimina el espacio inferior que aparece debajo de las imágenes al tratarlas como elementos en línea, asegurando que se comporten como bloques para un mejor control del diseño*/
 }
 
 button, input, textarea, select {
-  font-family: inherit;
-  font-size: inherit;
+  font-family: inherit; /*Hace que los elementos de formulario hereden la fuente del cuerpo para una apariencia consistente en todo el sitio*/
+  font-size: inherit; /*Hace que los elementos de formulario hereden el tamaño de fuente del cuerpo para una apariencia consistente en todo el sitio*/
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  background: none;
+  cursor: pointer; /*Cambia el cursor a una mano al pasar sobre los botones para indicar que son interactivos*/
+  border: none; /*Elimina el borde por defecto de los botones para un estilo más limpio*/
+  background: none; /*Elimina el fondo por defecto de los botones para un estilo más limpio*/
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: collapse; /*Elimina el espacio entre las celdas de la tabla para un diseño más compacto y limpio*/
+  border-spacing: 0; /*Elimina el espacio entre las celdas de la tabla para un diseño más compacto y limpio*/
 }

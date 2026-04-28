@@ -44,6 +44,17 @@ initMenu();
 
 
 
+
+//MODO OSCURO
+import { initTheme } from "./utils.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    initTheme();
+});
+
+
+
+
 //SKILLS 
 import { skills } from "./data.js";
 import { renderSkills } from "./utils.js";
@@ -53,13 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-//MODO OSCURO
-import { initTheme } from "./utils.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-    initTheme();
-});
 
 
 //CHEATSHEETS

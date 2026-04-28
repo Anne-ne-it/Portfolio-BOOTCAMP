@@ -1,7 +1,7 @@
 //MENU NAVEGACION
 export const menuNavegacion = () => {
-    // Detectamos si estamos en la raíz o dentro de la carpeta HTML
-    // Esto evita que las rutas se rompan al navegar
+    //Detectamos si estamos en la raíz o dentro de la carpeta HTML
+    //Esto evita que las rutas se rompan al navegar
     const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
     const pathPrefix = isRoot ? './HTML/' : './';
     const indexPrefix = isRoot ? './' : '../';
