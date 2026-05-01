@@ -46,30 +46,8 @@ initMenu();
 
 
 //MODO OSCURO
-import { initTheme } from "./utils.js";
+import { initTheme } from "./modooscuroutils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
-});
-
-
-
-
-//SKILLS 
-import { skills } from "./data.js";
-import { renderSkills } from "./utils.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-    renderSkills(skills);
-});
-
-
-
-
-//CHEATSHEETS
-import { cheatsheets } from "./data.js";
-import { renderCheatsheets } from "./utils.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-    renderCheatsheets(cheatsheets);
 });

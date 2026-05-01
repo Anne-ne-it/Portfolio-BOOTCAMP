@@ -612,7 +612,7 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
   display: flex; /*Pone un elemento junto al otro*/
   flex-direction: column; /*Pone un elemento sobre otro*/
   align-items: center; /*Alinea los elementos en el centro*/
-  margin: 70px auto; /*Margen superior*/
+  margin: 100px auto; /*Margen superior*/
 }
 
 .aboutseccion h1{
@@ -760,7 +760,7 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 }
 
 .educacionlista span, .practicaslista span, .experiencialista span{
-  font-size: 16px; /*Tamaño del texto*/
+  font-size: 20px; /*Tamaño del texto*/
   color: var(--color-accent-blue); /*Color del texto*/
 }
 
@@ -818,8 +818,95 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 
 
 /*RECURSOS*/
+.recursos-cards-seccion {
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-direction: column; /*Pone un elemento sobre otro*/
+  margin-top: 100px; /*Margen superior*/
+}
+
+.recursos-cards-seccion h1 {
+  margin-bottom: var(--space-sm); /*Separa un elemento de el de abajo suyo*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Para la linea que lo subraya*/
+  width: fit-content; /*La linea mide lo mismo que el texto de arriba*/
+  text-align: left; /*Alinea el texto a la izquierda*/
+}
+
+.recursos-subtitulo {
+  font-size: 20px; /*Tamaño del texto*/
+  text-align: left; /*Alinea el texto a la izquierda*/
+  margin-bottom: var(--space-lg); /*Espacio con el objeto de abajo*/
+}
+
+/*TABS*/
+.recursos-tabs {
+  display: flex; /*Pone un elemento junto al otro*/
+  flex-wrap: wrap; /*Permite que los elementos bajen si no caben*/
+  gap: var(--space-md); /*Espacio entre los elementos*/
+  justify-content: center; /*Alinea los elementos horizontalmente en el centro*/
+  margin-bottom: var(--space-xl); /*Espacio con la parte de abajo*/
+}
+
+.recursos-tab {
+  background-color: transparent; /*Fondo transparente para que se vea el fondo del contenedor*/
+  color: var(--color-text-primary); /*Color del texto del botón de la pestaña*/
+  font-size: 16px; /*Tamaño del texto del botón de la pestaña*/
+  font-weight: var(--font-weight-medium); /*Grosor del texto del botón de la pestaña*/
+  cursor: pointer; /*Convierte el cursor en una mano al pasar por el botón de la pestaña*/
+  padding: var(--space-sm) var(--space-md); /*Espacio con la parte de arriba y abajo, y con los lados del botón de la pestaña*/
+  transition: all var(--transition-fast); /*Tiempo del efecto al pasar por el botón de la pestaña*/
+}
+
+.recursos-tab.active {
+  color: var(--color-bg-main); /*Color del texto del botón de la pestaña activa*/
+  background-color: var(--color-accent-blue); /*Color de fondo del botón de la pestaña activa*/
+  border-radius: var(--radius-sm); /*Redondear las esquinas del botón de la pestaña activa*/
+}
 
 
+/*GRID TARJETAS*/
+.recursos-grid {
+  display: grid; /*Activa el modo grid*/
+  grid-template-columns: repeat(2, 1fr); /*Crea dos columnas del mismo tamaño*/  
+  gap: var(--space-md); /*Espacio entre las tarjetas*/
+  align-items: stretch; /*Esto obliga a las tarjetas de la misma fila a medir lo mismo*/
+  margin-bottom: var(--space-xl); /*Margen de separacion inferior*/
+}
+
+.recursos-card {
+  display: flex; /*Permite usar flexbox*/
+  flex-direction: column; /*Alinea el texto uno sobre otro*/
+  min-width: 300px; /*Ancho minimo para que no se vea muy estrecho*/
+  background-color: var(--color-bg-soft); /*Color de fondo*/
+  border-radius: var(--radius-md); /*Redondear las esquinas*/
+  padding: var(--space-md); /*Espacio interno con el borde*/
+  box-shadow: var(--shadow-soft); /*Sombreado*/
+  text-decoration: none; /*Quita la decoracion predeterminada*/
+  color: var(--color-text-primary); /*Color del texto*/
+  border-left: 4px solid var(--color-accent-blue); /*Linea de color en el margen izquierdo*/
+  transition: all var(--transition-normal); /*Hace que los cambios sean suaves*/
+}
+
+.recursos-card h3 {
+  margin: 0; /*Quita margenes predeterminados*/
+  color: var(--color-text-primary); /*Color del titulo*/
+}
+
+.recursos-card p {
+  margin: var(--space-xs) 0 0 0; /*Margen solo en la parte superior*/
+  font-size: 16px; /*Tamaño*/
+  color: var(--color-text-primary); /*Color*/
+}
+
+.recursos-card:hover {
+  transform: translateY(-4px); /*Desplaza la tarjeta hacia arriba*/
+  box-shadow: var(--shadow-soft); /*Sombreado*/
+  border-left-color: var(--color-accent-yellow); /*Color margen izquierdo*/
+}
+
+.recursos-link {
+  margin-top: var(--radius-sm); /*Separaion en la parte superior*/
+  text-decoration: none; /*Quita decoracion predeterminada*/
+}
 
 
 /*FORMULARIO DE CONTACTO*/
@@ -937,6 +1024,14 @@ textarea {
 
 
 @media (max-width: 768px) {
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+
 /*MENU HAMBURGUESA*/
 .hamburguesa {
   display: flex; /*Muestra el botón de hamburguesa en pantallas pequeñas*/
@@ -1225,6 +1320,31 @@ footer, .pie-de-pagina {
 
 
 /*RECURSOS*/
+.recursos-cards-seccion {
+  margin-top: 60px; /*Argen superior*/
+}
+
+.recursos-subtitulo {
+  font-size: 16px; /*Un poco mas pequeño*/
+  margin-bottom: var(--space-md); /*Un poco menos de espacio*/
+}
+
+/*TABS*/
+.recursos-tabs {
+  gap: var(--space-sm); /* Espacio más pequeño entre botones */
+  justify-content: center; /*Alinea al centro*/
+}
+
+/*GRID TARJETAS*/
+.recursos-grid {
+  grid-template-columns: 1fr; /*De 2 columnas a 1 columna*/
+  gap: var(--space-md); /* Espacio entre tarjetas */
+}
+
+.recursos-card {
+  min-width: 0; /*Quita el ancho mínimo de 300px*/
+  width: 100%;  /*Ocupa el 100% del contenedor*/
+}
 
 
 /*FORMULARIO DE CONTACTO*/

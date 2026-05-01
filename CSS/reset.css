@@ -31,30 +31,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 48px; /*Tamaño del título principal para pantallas grandes*/
+  font-size: 54px; /*Tamaño del título principal para pantallas grandes*/
   font-weight: var(--font-weight-black); /*900*/
   color: var(--color-text-primary); /*Color del texto principal para el título*/
 }
 
 h2 {
-  font-size: 32px; /*Tamaño del título secundario para pantallas grandes*/
+  font-size: 40px; /*Tamaño del título secundario para pantallas grandes*/
   font-weight: var(--font-weight-bold); /*700*/
   color: var(--color-text-primary); /*Color del texto principal para el título*/
 }
 
 h3 {
-  font-size: 24px; /*Tamaño del título terciario para pantallas grandes*/
+  font-size: 32px; /*Tamaño del título terciario para pantallas grandes*/
   font-weight: var(--font-weight-medium); /*500*/
   color: var(--color-accent-blue); /*Color del texto de acento azul para el título*/
 }
 
 h4 {
-  font-size: 20px; /*Tamaño del título cuaternario para pantallas grandes*/
+  font-size: 27px; /*Tamaño del título cuaternario para pantallas grandes*/
   font-weight: var(--font-weight-medium); /*500*/
 }
 
 h5 {
-  font-size: 16px; /*Tamaño del título quinario para pantallas grandes*/
+  font-size: 20px; /*Tamaño del título quinario para pantallas grandes*/
   font-weight: var(--font-weight-regular); /*400*/
 }
 

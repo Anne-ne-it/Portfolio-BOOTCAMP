@@ -13,7 +13,7 @@ export const menuNavegacion = () => {
             <li><a href="${pathPrefix}about.html">About</a></li>
             <li><a href="${indexPrefix}index.html#skills">Skills</a></li>
             <li><a href="${indexPrefix}index.html#cheatsheets">Cheatsheets</a></li>
-            <li><a href="${pathPrefix}recursos.html">Recursos</a></li>
+            <li><a href="${pathPrefix}recuersos.html">Recursos</a></li>
             <li><a href="${pathPrefix}contacto.html">Contacto</a></li>
           </ul>
 
