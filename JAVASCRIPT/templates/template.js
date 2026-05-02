@@ -1,12 +1,12 @@
 //MENU NAVEGACION
-export const menuNavegacion = () => {
-    //Detectamos si estamos en la raíz o dentro de la carpeta HTML
-    //Esto evita que las rutas se rompan al navegar
-    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
-    const pathPrefix = isRoot ? './HTML/' : './';
-    const indexPrefix = isRoot ? './' : '../';
+export const menuNavegacion = () => { //Exporta la función del menú para poder usarla
+    //LOGICA DE LAS RUTAS
+    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname === '/'; //Detecta donde está el usuario
+    const pathPrefix = isRoot ? './HTML/' : './'; //En la raiz las páginas están en ./HTML/, si está dentro uda ./
+    const indexPrefix = isRoot ? './' : '../'; //En el index usa ./, dentro de una carpeta sube de nivel ../
 
-    return `
+    //Retorna el string de HTML (Template Literal) con las rutas inyectadas
+    return ` 
     <nav class="menuNavegacion">
         <a href="${indexPrefix}index.html" class="logo"><strong>AA</strong></a>
           <ul>
@@ -30,7 +30,8 @@ export const menuNavegacion = () => {
 }
     
 //FOOTER
-export const footer = () => {
+export const footer = () => { //Exporta la función que genera el contenido del pie de página
+    // Retorna el string de HTML (Template Literal) con las rutas inyectadas
     return `
                <ul class="botones-pie">
           <li><a href="https://www.instagram.com/    annemoo_/?utm_source=ig_embed&ig_rid=f74d52cc-d276-4a1f-a97a-43123a3be1d2&ig_mid=ECF20A95-5C0A-47FB-A9F1-EBD770145E6B" target="_blank" rel="noopener noreferrer">Instagram</a></li>
