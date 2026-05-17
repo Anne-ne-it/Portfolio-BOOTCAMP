@@ -415,7 +415,7 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-lg);
-  justify-content: center;
+  justify-content: center; 
 }
 
 .projects-card {
@@ -423,7 +423,8 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
   padding: var(--space-lg); /*Espacio entre los elementos y la caja*/
   border-radius: var(--radius-md); /*Redondear las esquinas*/
   box-shadow: var(--shadow-soft); /*Sombra de la caja*/
-  width: 400px; /*Ancho*/
+  max-width: 400px; /*Ancho*/
+  width: 100%; /*Ocipa el máximo del ancho disponible*/
   gap: var(--space-lg); /*Distancia entre elementos*/
 }
 
@@ -1238,6 +1239,36 @@ footer, .pie-de-pagina {
 
 
 /*PROYECTOS*/
+#projects {
+  padding: 0 var(--space-md); /*Espacio entre el elemento y la caja*/
+}
+
+.projects-container {
+  flex-direction: column; /*Pone los elementos uno sobre otro*/
+  align-items: center; /*Alinea los elementos*/
+  gap: var(--space-md); /*Epacio entre elementos*/
+}
+
+.projects-card {
+  width: 100%; /*Ocupa el ancho máximo disponible*/
+  max-width: 500px; /*Ancho máximo*/
+  padding: var(--space-md); /*Espacio entre elemento y caja*/
+}
+
+.projects-card p {
+  font-size: 12px; /*Tamaño de la fuente*/
+  text-align: justify; /*Texto justificado*/
+}
+
+.projects-links {
+  justify-content: center; /*Centra los elementos*/
+  flex-wrap: wrap; /*Los elementos bajan*/
+}
+
+.projects-links a {
+  width: 100%; /*Ocupa el máximo del ancho disponible*/
+  text-align: center; /*Alinea el texto al centro*/
+}
 
 
 /*SECCIÓN DE TARJETAS CHEATSHEETS*/  
