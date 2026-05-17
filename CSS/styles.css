@@ -249,7 +249,6 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 
 
 /*INDEX - HOME*/
-/*Forzamos el modo fila */
 .contenedor-hero {
   display: flex; /*Coloca los elementos uno junto al otro*/
   flex-direction: row; /*Fuerza horizontal*/
@@ -398,6 +397,78 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 
 
 /*PROYECTO EN PROGRESO*/
+#projects h3 {
+  display: block; /*Se comporta como un bloque sólido*/
+  border-bottom: 4px solid var(--color-accent-yellow); /*Línea*/
+  width: fit-content; /*La línea medirá lo que mida el texto */
+  margin: 0; /*Distancia con el margen*/
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  justify-content: center;
+}
+
+.projects-card {
+  background-color: var(--color-bg-main); /*Color de fondo*/
+  padding: var(--space-lg); /*Espacio entre los elementos y la caja*/
+  border-radius: var(--radius-md); /*Redondear las esquinas*/
+  box-shadow: var(--shadow-soft); /*Sombra de la caja*/
+  width: 400px; /*Ancho*/
+  gap: var(--space-lg); /*Distancia entre elementos*/
+}
+
+.projects-card h4 {
+  color: var(--color-accent-blue); /*Color del texto*/
+  margin-bottom: var(--space-md); /*Margen inferior*/
+}
+
+.projects-card p {
+  font-size: 14px; /*Tamaño de fuente*/
+  text-align: left; /*Alineación del texto*/
+  margin-bottom: var(--space-md); /*Margen inferior*/
+}
+
+.projects-tags {
+  display: flex; /*Crear el contenedor flex*/
+  flex-wrap: wrap; /*Los elementos bajan*/
+  gap: var(--space-sm); /*Distancia entre elementos*/
+  margin-bottom: var(--space-md); /*Margen inferior*/
+}
+
+.projects-links{
+  display: flex; /*Pone un elemento junto al otro*/
+  gap: var(--space-md); /*Espacio etre los elementos*/
+  justify-content: right;/*Alinea los botones a la derecha*/
+}
+
+.projects-links a {
+  display: inline-block; /*Colocar elementos uno al lado del otro, con control de tamaño*/
+  color: var(--color-accent-blue); /*Color del texto*/
+  font-size: 14px; /*Tamaño del texo*/
+  padding: 8px 18px; /*Margenes*/
+  border: 1px solid var(--color-accent-blue); /*Un pequeño recuadro para el logo*/
+  border-radius: 7px; /*Borde del cuadro*/
+  background-color: transparent; /*Fondo de color transparente*/
+  transition: all var(--transition-normal); /*Velocidad para la animación*/
+}
+
+.projects-links a:hover {
+  color: var(--color-bg-main); /*Color del texto*/
+  transform: translateY(-2px); /*Para que suba*/
+  background-color: var(--color-accent-blue); /*Cambia el color de fonde del boton a gris claro*/
+  box-shadow: var(--shadow-soft); /*Sombra de la caja*/
+  transition: all var(--transition-normal); /*Velocidad para la animación */
+}
 
 
 
