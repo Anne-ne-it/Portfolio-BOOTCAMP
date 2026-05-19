@@ -327,6 +327,66 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 
 
 
+/*CLIMA API*/
+.weather-sidebar {
+    position: fixed; /*Se queda fijo al hacer scroll*/
+    right: 20px; /*Distancia desde el borde derecho*/
+    top: 50%; /* Lo centramos verticalmente */
+    transform: translateY(-50%); /*Ajuste fino para centrado perfecto*/
+    z-index: 1000; /* segura que esté por encima de otros elementos*/
+}
+
+/*Estilo del Widget con efecto cristal*/
+.weather-widget {
+  background: rgba(255, 255, 255, 0.25); /*Fondo semi-transparente*/
+  backdrop-filter: blur(12px); /*Efecto de desenfoque de fondo*/
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 110px; /* Tamaño ideal para el lateral */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.weather-widget:hover {
+transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
+}
+
+/* Icono y Temperatura */
+.weather-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.weather-temp {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-text-primary); /* Usa tu variable de color */
+}
+
+/* Nombre de la ciudad */
+.weather-city {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
 /*SKILLS, PROYECTOS Y CHEATSHEETS*/
 #skills h3, #proyectos h3, #cheatsheets h3 {
   display: block; /*Se comporta como un bloque sólido*/
