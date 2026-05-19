@@ -330,7 +330,7 @@ footer, .pie-de-pagina, .dark-mode footer,  .dark-mode .pie-de-pagina{
 /*CLIMA API*/
 .weather-sidebar {
     position: fixed; /*Se queda fijo al hacer scroll*/
-    right: 20px; /*Distancia desde el borde derecho*/
+    right: 0px; /*Distancia desde el borde derecho*/
     top: 50%; /* Lo centramos verticalmente */
     transform: translateY(-50%); /*Ajuste fino para centrado perfecto*/
     z-index: 1000; /* segura que esté por encima de otros elementos*/
