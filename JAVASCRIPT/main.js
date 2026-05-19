@@ -84,3 +84,13 @@ document.addEventListener("DOMContentLoaded", () => { //Empieza al cargar HTML p
         renderRecursosTabs(recursos); //Hace que se vean en la pantalla
     }
 });
+
+
+
+
+//CLIMA API
+import getWeather from "./utils/weather.js"; //Importa la función para obtener el clima desde utils
+
+document.addEventListener("DOMContentLoaded", () => { //Empieza al cargar HTML por el navegador
+    getWeather(); //Hace que se muestre el clima en la pantalla
+});
